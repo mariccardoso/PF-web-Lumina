@@ -1,0 +1,39 @@
+.containerIntroduction {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    text-align: center; 
+    margin-top: 1rem;
+}
+
+.containerIntroduction h2 {
+    font-size: 2.5rem;
+    color: #3574BB;
+    width: 60%;
+}
+
+.cardIntroduction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem; 
+}
+
+.cardItem {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center; 
+    gap: 1rem; 
+    width: 30%;
+    margin-top: 1rem
+}
+
+.cardItem p {
+    font-size: 24px;
+    text-align: center; 
+    color: #000;
+}
+
+
