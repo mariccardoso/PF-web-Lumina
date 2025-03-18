@@ -1,10 +1,4 @@
 .container {
-  background-image: url('../../public/Main-image.png');
-  height: 52rem;
-}
-
-.mainImage {
-  width: 100%;
-  height: auto;
-  flex-shrink: 0;
+  background-image: url('../../public/main-image.png');
+  height: 100vh;
 }
