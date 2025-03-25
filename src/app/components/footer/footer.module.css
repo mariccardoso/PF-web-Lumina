@@ -1,25 +1,44 @@
-.header {
+.footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1rem;
     width: 100%;
     padding: 0 2rem;
+    background-color: #A7D6ED;
 }
 
-.header a {
+.footer a {
     text-decoration: none;
     color: #fff;
     font-size: 1.8rem;
 }
 
-.topHeader {
+
+.footer p {
+    font-size: 22px;
+    color: #fff;
+}
+
+.topfooter {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     width: 100%;
+}
+
+.footerInfo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 1rem;
+}
+
+.footerInfo p {
+    font-size: 1.5rem;
+    color: #fff;
 }
 
 .navbar {

@@ -2,10 +2,8 @@ import styles from "./footer.module.css";
 
 const Footer = () => {
   return (
-    <header className={styles.header}>
-      <div className={styles.topHeader}>
-        <p className={styles.contact}>Contato:luminabloom@gmail.com</p>
-        <p className={styles.contact}>Telefone: (19) 99379-4962 </p>
+    <footer className={styles.footer}>
+      <div className={styles.topfooter}>
         <img
           className={styles.logo}
           src={"logo_principal.svg"}
@@ -13,9 +11,8 @@ const Footer = () => {
           width={200}
           height={100}
         />
-        <p>Instagram: @lumi.na bloom</p>
-        <p>Faceboook: LuminaBloom</p>
       </div>
+
       <nav className={styles.navbar}>
         <ul>
           <li>
@@ -29,7 +26,13 @@ const Footer = () => {
           </li>
         </ul>
       </nav>
-    </header>
+      <div className={styles.footerInfo}>
+        <p>Contato:luminabloom@gmail.com</p>
+        <p>Telefone: (19) 99379-4962 </p>
+        <p>Instagram: @lumi.na bloom</p>
+        <p>Faceboook: LuminaBloom</p>
+      </div>
+    </footer>
   );
 };
 
