@@ -1,0 +1,41 @@
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    padding: 0 2rem;
+}
+
+.header a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.8rem;
+}
+
+.topHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    gap: 5rem;
+}
+
+.navbar ul li {
+    margin-right: 20px;
+}

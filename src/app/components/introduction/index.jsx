@@ -18,9 +18,7 @@ const Introduction = () => {
 
               <div className={styles.cardItem}>
                 <Image className={styles.logo} src={"/diamante.png"} alt='Icone de diamante' width={62} height={62}/>
-         
-                  <p>Autocuidado, Inclusão, Empoderamento feminino</p>
-                           
+                  <p>Autocuidado, Inclusão, Empoderamento feminino</p>   
                 </div>
             </div>
         </section>
