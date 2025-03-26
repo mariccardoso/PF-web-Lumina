@@ -4,6 +4,17 @@
   background-size: cover;
   background-position: center;
   /* background-attachment: fixed; */
-
   height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: 55vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    height: 30vh;
+  }
 }

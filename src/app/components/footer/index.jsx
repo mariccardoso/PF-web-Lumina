@@ -3,7 +3,6 @@ import styles from "./footer.module.css";
 const Footer = () => {
   return (
     <footer className={styles.footer}>
-      <div className={styles.topfooter}>
         <img
           className={styles.logo}
           src={"logo_principal.svg"}
@@ -11,7 +10,6 @@ const Footer = () => {
           width={200}
           height={100}
         />
-      </div>
 
       <nav className={styles.navbar}>
         <ul>
