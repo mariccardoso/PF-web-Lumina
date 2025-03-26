@@ -3,8 +3,50 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  /* background-attachment: fixed; */
   height: 100vh;
+}
+
+.beautyContainer {
+  display: flex;
+}
+
+.imgContent {
+  background-color: rosybrown;
+}
+
+.beautyContent {
+  background-color: rgba(165, 161, 161, 0.842);
+  width: 60%;
+  height: 71vh;
+  display: flex;
+  flex-direction: column;
+  align-items:center ;
+  justify-content: center;
+}
+
+.beautyContent h2 {
+  font-size: 2.5rem;
+}
+.beautyContent p {
+  display: flex;
+  margin-top: 8.75;
+  font-style: italic;
+  font-size: 1.5rem;
+}
+
+.beautyCards {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+
+.textBeauty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-style: italic;
+  font-weight: normal; 
 }
 
 @media (max-width: 768px) {
