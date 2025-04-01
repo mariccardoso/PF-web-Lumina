@@ -12,13 +12,14 @@
 }
 
 .imgContent {
-  background-color: rosybrown;
+  width: 80%;
+  height: 70vh;
 }
 
 .beautyContent {
-  background-color: rgba(165, 161, 161, 0.842);
-  width: 60%;
-  height: 71vh;
+  background-color: #F0F0F1;
+  width: 100%;
+  height: 70vh;
   display: flex;
   flex-direction: column;
   align-items:center ;
