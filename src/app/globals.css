@@ -1,8 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@font-face {
+  font-family: 'Tan Pearl';
+  src: url('/fonts/tan-pearl.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+  --light-blue: #c0eaf6;
+  --second-light-blue: #a7d6ed;
+  --darkest-blue: #3574bb;
+  --background-color: #f5f5f5;
+  --black: #333;
+  --white: #fff;
+  --title-font: 'Tan Pearl', sans-serif;
+  --subtitle-font: 'EB Garamond', serif;
+  --body-font: 'Poppins', sans-serif;
+}
+
+/* Resetando o css */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Eb Garamond, serif;  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }

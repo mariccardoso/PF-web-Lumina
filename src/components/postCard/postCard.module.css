@@ -1,0 +1,39 @@
+.card {
+    width: 25rem;
+    height: 14rem;
+    border-radius: 10px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    color: white;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    z-index: 0;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    padding: 1rem;
+  }
+  
+  .title {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+  }
+  
+  .actions {
+    display: flex;
+    gap: 0.75rem;
+    opacity: 0.9;
+  }
+  

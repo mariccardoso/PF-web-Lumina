@@ -1,0 +1,56 @@
+.categoriesCard {
+  width: 32%;
+  height: 15rem;
+  display: flex;
+  flex-direction: row;
+  border-radius: 15px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease;
+}
+  .categoriesCard:hover {
+    transform: scale(1.02);
+    transition: transform 0.4s ease;
+  }
+  
+  .categoriesCardImageContainer {
+    width: 100%;
+    height: 15rem;
+  }
+  
+  /* Leve degradê translúcido na lateral direita da imagem */
+  .categoriesCardImageContainer::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to left,
+      #3574bb00,
+      #3574bb
+    );
+    pointer-events: none;
+  }
+  
+  
+  .categoriesCardImageContainer {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+  }
+  .categoriesCardImageContainer h2{
+      position: absolute ; 
+      top: 65%;
+      margin-left: 2rem;
+      z-index: 1; /* Ensure text appears above the gradient */
+  
+      /* style */
+      font-size: 2rem;
+      font-weight: 500;
+      color: #fff;
+      font-family: var(--body-font);
+      text-align: left;
+  }
