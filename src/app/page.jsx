@@ -28,7 +28,7 @@ export default function Home() {
     {
       id: 4,
       title: "5 erros comuns no cuidado com a pele",
-      image: "https://media-public.canva.com/Stwz4/MAEoKSStwz4/1/s.jpg",
+      image: "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2Faeb9578d-6f62-4976-a58c-50b017df546e?csig=AAAAAAAAAAAAAAAAAAAAANi3QzW3jn6x5svNo8Irof255q-uNY16h5sXvoU6eUZx&exp=1744157695&signer=media-rpc&token=AAIAAU0AJGFlYjk1NzhkLTZmNjItNDk3Ni1hNThjLTUwYjAxN2RmNTQ2ZQAAAAABlhfmXBjUa-yoAvmk4ouO0sv0IB6SASCNRBOKODV1L24zrZez8A",
     },
   ];
 
