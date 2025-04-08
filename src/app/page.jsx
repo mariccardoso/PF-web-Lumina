@@ -17,7 +17,7 @@ export default function Home() {
     {
       id: 2,
       title: "Rotina de skincare noturna: o que não pode faltar?",
-      image: "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2F5f2cb386-6907-4591-b4d0-b103adea698c?csig=AAAAAAAAAAAAAAAAAAAAAKJFFDJdTLX1E80hRE7SkLOsJRT_BXWfvU5hluB5fiaT&exp=1743949082&signer=media-rpc&token=AAIAAU0AJDVmMmNiMzg2LTY5MDctNDU5MS1iNGQwLWIxMDNhZGVhNjk4YwAAAAABlgt3LZCqJlcBzshyWQP2SguV3B4gv7MgYmKFJP4V-J9ZtMuL-gg",
+      image: "https://marketplace.canva.com/6Aaik/MAD54c6Aaik/1/s2/canva-woman-getting-a-facial-treatment-MAD54c6Aaik.jpg",
     },
     {
       id: 3,
@@ -32,19 +32,19 @@ export default function Home() {
       id: 1,
       name: "Cuidados Capilares",
       image:
-        "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2FGn68jgZOfBrX86slqoNMh6dLWkErQ6VPMR3L53ZoOA0.jpg?csig=AAAAAAAAAAAAAAAAAAAAAC1dRi_3bicXYlCuE4UDWuQT1IAh3I7vQqAZOkzhuvS3&exp=1743946471&signer=media-rpc&token=AAIAAU0AL0duNjhqZ1pPZkJyWDg2c2xxb05NaDZkTFdrRXJRNlZQTVIzTDUzWm9PQTAuanBnAAAAAAGWC09WWCVHCvjeuH4dBBJM34bUTIxn7r5YLDE8h6mLWGASRA9k",
+        "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2Fn7PNFAqKDma4mr-4Fl762rA91k8vORTT_Kgpssrwxa4.jpg?csig=AAAAAAAAAAAAAAAAAAAAAPNzrP-Sxq_0dKe0awVAhmWtHq-5Ke03MKQz9fweVgeU&exp=1744147814&signer=media-rpc&token=AAIAAU0AL243UE5GQXFLRG1hNG1yLTRGbDc2MnJBOTFrOHZPUlRUX0tncHNzcnd4YTQuanBnAAAAAAGWF0-WcAcDaGShvmCQ_0LZxlpY9iOx7LhQFxGHrgjPpEPHQMdC",
     },
     {
       id: 2,
       name: "Maquiagem",
       image:
-        "https://media.canva.com/v2/image-resize/format:JPG/height:533/quality:92/uri:ifs%3A%2F%2F%2F33b7540b-1fa4-4bd0-b4c1-7ded4d1d14dc/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAADmHb8LQH81QKJVY4RQPeNj9PpG9FDS4gjKc3cMOBA-w&exp=1743946636&osig=AAAAAAAAAAAAAAAAAAAAAAifvZlOzeQH0HiCPOeFqYFjTnF3NnA83AQ2TEX5eWyH&signer=media-rpc&x-canva-quality=screen",
+        "https://marketplace.canva.com/zrvHo/MAEL3YzrvHo/1/s2/canva-eye-shadow-palette-on-marble-background%2C-make-up-and-cosmetics-product-for-luxury-beauty-brand-sale-promotion-and-holiday-flatlay-design-MAEL3YzrvHo.jpg",
     },
     {
       id: 3,
       name: "Skin Care",
       image:
-        "https://media.canva.com/v2/image-resize/format:JPG/height:533/quality:92/uri:ifs%3A%2F%2F%2Ff4196279-684d-4675-a005-9f80477ac64d/watermark:F/width:800?csig=AAAAAAAAAAAAAAAAAAAAAHkG2Utuah7o_cSxIXGL0UVFkkypNyTQ_T-UfuUyIT3X&exp=1743946261&osig=AAAAAAAAAAAAAAAAAAAAAHTwu_PwCNpTix6taF8cNzBEVqFlqDbs7Rb8zVZMGWeB&signer=media-rpc&x-canva-quality=screen",
+        "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2F3EqTNCefc-AyufnEbaUALX0Gg-ZdoQLDIbcjzpYEvQ4.jpg?csig=AAAAAAAAAAAAAAAAAAAAAMNUgHlpJnvoQU3JaRkcTmfrWO49JvQBDo5843y2bfA0&exp=1744147491&signer=media-rpc&token=AAIAAU0ALzNFcVROQ2VmYy1BeXVmbkViYVVBTFgwR2ctWmRvUUxESWJjanpwWUV2UTQuanBnAAAAAAGWF0qouNlMevrRqNyoJYCWYWPDKde2wX1xFgbu-jv796Y6NsTf",
     },
   ];
 
