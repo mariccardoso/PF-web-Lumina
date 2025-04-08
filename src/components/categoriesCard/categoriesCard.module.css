@@ -44,9 +44,8 @@
   .categoriesCardImageContainer h2{
       position: absolute ; 
       top: 65%;
-      margin-left: 2rem;
       z-index: 1; /* Ensure text appears above the gradient */
-  
+      margin-left: 1rem;
       /* style */
       font-size: 2rem;
       font-weight: 500;

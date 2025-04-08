@@ -1,0 +1,134 @@
+/* Estilos gerais */
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 5rem;
+    font-family: "EB Garamond", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--white);
+    min-height: 100vh;
+    color: #333;
+  }
+  
+  
+  /* Conteúdo principal com layout de duas colunas */
+  .mainContent {
+    display: flex;
+    gap: 5rem;
+    margin-top: 20px;
+  }
+  
+  .categoriesSection {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap; /* importante */
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .contentArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 1024px) {
+    .mainContent {
+      flex-direction: column;
+    }
+  
+    .sidebar {
+      width: 100%;
+    }
+  
+    .heroSection {
+      flex-direction: column;
+    }
+  
+    .heroImageContainer {
+      height: 250px;
+    }
+  
+    .newsletterSection {
+      flex-direction: column;
+    }
+  
+    .newsletterImageContainer {
+      max-width: 100%;
+      height: 200px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .header {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+  
+    .nav {
+      order: 3;
+      width: 100%;
+      overflow-x: auto;
+      padding-bottom: 5px;
+    }
+  
+    .userActions {
+      order: 1;
+    }
+  
+    .feedHeader {
+      flex-direction: column;
+      gap: 15px;
+      align-items: flex-start;
+    }
+  
+    .featuredGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .creatorsGrid {
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    }
+  
+    .footerTop {
+      flex-direction: column;
+      gap: 30px;
+    }
+  
+    .footerNavContainer {
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+  
+    .footerNavSection {
+      flex: 1 0 40%;
+    }
+  
+    .footerBottom {
+      flex-direction: column;
+      gap: 15px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .categoriesGrid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .feedGrid {
+      grid-template-columns: 1fr;
+    }
+  
+    .heroContent {
+      padding: 20px;
+    }
+  
+    .heroTitle {
+      font-size: 24px;
+    }
+  
+    .footerNavSection {
+      flex: 1 0 100%;
+    }
+  }

@@ -25,3 +25,37 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Estilos gerais */
+.container {
+  max-width: 95%;
+  margin: 0 auto;
+  padding: 2rem 5rem;
+  font-family: "EB Garamond", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white);
+  min-height: 100vh;
+  color: #333;
+}
+
+
+/* Conteúdo principal com layout de duas colunas */
+.mainContent {
+  display: flex;
+  gap: 5rem;
+  margin-top: 20px;
+}
+
+.categoriesSection {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap; /* importante */
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.contentArea {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}

@@ -7,6 +7,7 @@ import CarouselSection from "@/components/carouselSection";
 import CategoriesSection from "@/components/categoriesSection";
 
 export default function Home() {
+
   // Array de dados dos memes para serem passados como props
   const posts = [
     {
@@ -21,6 +22,11 @@ export default function Home() {
     },
     {
       id: 3,
+      title: "5 erros comuns no cuidado com a pele",
+      image: "https://media-public.canva.com/Stwz4/MAEoKSStwz4/1/s.jpg",
+    },
+    {
+      id: 4,
       title: "5 erros comuns no cuidado com a pele",
       image: "https://media-public.canva.com/Stwz4/MAEoKSStwz4/1/s.jpg",
     },
@@ -47,6 +53,7 @@ export default function Home() {
         "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2F3EqTNCefc-AyufnEbaUALX0Gg-ZdoQLDIbcjzpYEvQ4.jpg?csig=AAAAAAAAAAAAAAAAAAAAAMNUgHlpJnvoQU3JaRkcTmfrWO49JvQBDo5843y2bfA0&exp=1744147491&signer=media-rpc&token=AAIAAU0ALzNFcVROQ2VmYy1BeXVmbkViYVVBTFgwR2ctWmRvUUxESWJjanpwWUV2UTQuanBnAAAAAAGWF0qouNlMevrRqNyoJYCWYWPDKde2wX1xFgbu-jv796Y6NsTf",
     },
   ];
+  
 
   return (
     <div className={styles.container}>
@@ -65,7 +72,7 @@ export default function Home() {
             mainCardButton={"learn more"}
           />
           <CategoriesSection categories={categories} categoriesTitle={"Confira o melhor do autocuidado"} />
-          <CarouselSection carouselTitle={"Ultimas postagens do Lumina"} posts={posts} />
+          <CarouselSection posts={posts} />
         </div>
       </div>
       <Footer />
