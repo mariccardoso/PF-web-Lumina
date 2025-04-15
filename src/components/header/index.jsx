@@ -6,7 +6,9 @@ const Header = ({navItens = [
   { label: "Dicas", href: "/feed" },
   { label: "Curiosidades", href: "/curiosidades" },
   { label: "Contato", href: "/curiosidades" },
+  { label: "Sobre Nós", href: "/sobre" },
   { label: "Login", href: "/login" },
+
 ]}) => {
   return (
     <header className={styles.header}>
