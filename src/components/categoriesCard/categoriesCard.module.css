@@ -1,5 +1,5 @@
 .categoriesCard {
-  width: 32%;
+  width: 20rem;
   height: 15rem;
   display: flex;
   flex-direction: row;
@@ -47,7 +47,7 @@
       z-index: 1; /* Ensure text appears above the gradient */
       margin-left: 1rem;
       /* style */
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 500;
       color: #fff;
       font-family: var(--body-font);

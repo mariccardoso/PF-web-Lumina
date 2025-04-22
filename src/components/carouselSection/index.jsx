@@ -1,10 +1,28 @@
 // Arquivo: CarouselSection.jsx
-'use client'
-import { useState, useEffect, useRef } from 'react'
-import styles from './carousel.module.css'
-import PostCard from '../postCard'
+"use client";
+import { useState, useEffect, useRef } from "react";
+import styles from "./carousel.module.css";
+import PostCard from "../postCard";
+import axios from "axios";
 
-const CarouselSection = ({ posts, carouselTitle }) => {
+const CarouselSection = ({ carouselTitle }) => {
+  const url = "http://localhost:4000/post";
+
+  const [posts, setPosts] = useState([]);
+
+  useEffect(() => {
+    const fecthPosts = async () => {
+      try {
+        const response = await axios.get(url); // Faz a requisição para a API
+        setPosts(response.data); // Atualiza o estado conpmm os posts recebidos
+      } catch (error) {
+        console.error("Erro ao buscar postagens:");
+      }
+    };
+
+    fecthPosts(); // Chama a função para buscar os posts
+  }, []);
+
   const [currentIndex, setCurrentIndex] = useState(1);
   const [touchStartX, setTouchStartX] = useState(0);
   const [isTouching, setIsTouching] = useState(false);
@@ -34,7 +52,7 @@ const CarouselSection = ({ posts, carouselTitle }) => {
   const handleTouchStart = (e) => {
     setTouchStartX(e.touches[0].clientX);
     setIsTouching(true);
-    
+
     // Limpa o intervalo durante o toque
     if (intervalRef.current) {
       clearInterval(intervalRef.current);
@@ -43,10 +61,10 @@ const CarouselSection = ({ posts, carouselTitle }) => {
 
   const handleTouchMove = (e) => {
     if (!isTouching) return;
-    
+
     const touchEndX = e.touches[0].clientX;
     const diff = touchStartX - touchEndX;
-    
+
     // Evitar mudanças acidentais - requer movimento mínimo
     if (Math.abs(diff) > 50) {
       if (diff > 0) {
@@ -60,7 +78,7 @@ const CarouselSection = ({ posts, carouselTitle }) => {
 
   const handleTouchEnd = () => {
     setIsTouching(false);
-    
+
     // Reinicia o intervalo após o toque
     startAutoSlide();
   };
@@ -72,12 +90,12 @@ const CarouselSection = ({ posts, carouselTitle }) => {
     }
     intervalRef.current = setInterval(() => {
       nextSlide();
-    }, 2000); // Muda a cada 5 segundos
+    }, 3500); // Muda a cada 3.5 segundos
   };
 
   useEffect(() => {
     startAutoSlide();
-    
+
     return () => {
       if (intervalRef.current) {
         clearInterval(intervalRef.current);
@@ -95,11 +113,10 @@ const CarouselSection = ({ posts, carouselTitle }) => {
     }
     return index;
   };
-
   return (
     <section className={styles.carouselSection}>
       <h2 className={styles.title}>{carouselTitle}</h2>
-      <div 
+      <div
         className={styles.carouselContainer}
         ref={carouselRef}
         onTouchStart={handleTouchStart}
@@ -108,39 +125,44 @@ const CarouselSection = ({ posts, carouselTitle }) => {
       >
         <div className={styles.carouselTrack}>
           {/* Card da esquerda */}
-          <div className={`${styles.carouselSlide} ${styles.sideSlide} ${styles.leftSlide}`}>
-            <PostCard post={posts[getSlideIndex(currentIndex - 1)]} />
+          <div
+            className={`${styles.carouselSlide} ${styles.sideSlide} ${styles.leftSlide}`}
+          >
+            {posts.length > 0 && (
+              <PostCard post={posts[getSlideIndex(currentIndex - 1)]} />
+            )}
           </div>
-          
+
           {/* Card central (ativo) */}
           <div className={`${styles.carouselSlide} ${styles.activeSlide}`}>
-            <PostCard post={posts[currentIndex]} />
+            {posts.length > 0 && (
+              <PostCard post={posts[getSlideIndex(currentIndex)]} />
+            )}
           </div>
-          
+
           {/* Card da direita */}
-          <div className={`${styles.carouselSlide} ${styles.sideSlide} ${styles.rightSlide}`}>
-            <PostCard post={posts[getSlideIndex(currentIndex + 1)]} />
+          <div
+            className={`${styles.carouselSlide} ${styles.sideSlide} ${styles.rightSlide}`}
+          >
+            {posts.length > 0 && (
+              <PostCard post={posts[getSlideIndex(currentIndex + 1)]} />
+            )}
           </div>
         </div>
-        
+
         {/* Botões de navegação */}
-        <button className={`${styles.carouselButton} ${styles.prevButton}`} onClick={prevSlide}>
+        <button
+          className={`${styles.carouselButton} ${styles.prevButton}`}
+          onClick={prevSlide}
+        >
           &lt;
         </button>
-        <button className={`${styles.carouselButton} ${styles.nextButton}`} onClick={nextSlide}>
+        <button
+          className={`${styles.carouselButton} ${styles.nextButton}`}
+          onClick={nextSlide}
+        >
           &gt;
         </button>
-        
-        {/* Paginação */}
-        <div className={styles.pagination}>
-          {posts.map((_, index) => (
-            <button 
-              key={index} 
-              className={`${styles.paginationDot} ${index === currentIndex ? styles.activeDot : ''}`}
-              onClick={() => goToSlide(index)}
-            />
-          ))}
-        </div>
       </div>
     </section>
   );
