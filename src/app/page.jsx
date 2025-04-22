@@ -16,37 +16,13 @@ export default function Home() {
   ];
 
 
-  // Array de dados dos memes para serem passados como props
-  const posts = [
-    {
-      id: 1,
-      title: "Cuidar: o guia completo para cabelos saudáveis",
-      image: "https://media-public.canva.com/HmC-8/MAEHpcHmC-8/1/s.jpg",
-    },
-    {
-      id: 2,
-      title: "Rotina de skincare noturna: o que não pode faltar?",
-      image: "https://marketplace.canva.com/6Aaik/MAD54c6Aaik/1/s2/canva-woman-getting-a-facial-treatment-MAD54c6Aaik.jpg",
-    },
-    {
-      id: 3,
-      title: "5 erros comuns no cuidado com a pele",
-      image: "https://media-public.canva.com/Stwz4/MAEoKSStwz4/1/s.jpg",
-    },
-    {
-      id: 4,
-      title: "5 erros comuns no cuidado com a pele",
-      image: "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2Faeb9578d-6f62-4976-a58c-50b017df546e?csig=AAAAAAAAAAAAAAAAAAAAANi3QzW3jn6x5svNo8Irof255q-uNY16h5sXvoU6eUZx&exp=1744157695&signer=media-rpc&token=AAIAAU0AJGFlYjk1NzhkLTZmNjItNDk3Ni1hNThjLTUwYjAxN2RmNTQ2ZQAAAAABlhfmXBjUa-yoAvmk4ouO0sv0IB6SASCNRBOKODV1L24zrZez8A",
-    },
-  ];
-
   // Categorias de memes
   const categories = [
     {
       id: 1,
       name: "Cuidados Capilares",
       image:
-        "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2Fn7PNFAqKDma4mr-4Fl762rA91k8vORTT_Kgpssrwxa4.jpg?csig=AAAAAAAAAAAAAAAAAAAAAPNzrP-Sxq_0dKe0awVAhmWtHq-5Ke03MKQz9fweVgeU&exp=1744147814&signer=media-rpc&token=AAIAAU0AL243UE5GQXFLRG1hNG1yLTRGbDc2MnJBOTFrOHZPUlRUX0tncHNzcnd4YTQuanBnAAAAAAGWF0-WcAcDaGShvmCQ_0LZxlpY9iOx7LhQFxGHrgjPpEPHQMdC",
+        "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2FCWIrM9mY133F45QD0DxwmtFT1iyH3DFPm93HdhxEnS4.jpg?csig=AAAAAAAAAAAAAAAAAAAAAJ3-g-UH3PIYPww1t7KMkuI5j9cdEmS-c-wNLGQ2Mo4v&exp=1744325557&signer=media-rpc&token=AAIAAU0AL0NXSXJNOW1ZMTMzRjQ1UUQwRHh3bXRGVDFpeUgzREZQbTkzSGRoeEVuUzQuanBnAAAAAAGWIee7CEtV60hWHHb-GwcYhL6-pVwviLeusIz-dYVpwma8aLuG",
     },
     {
       id: 2,
@@ -58,7 +34,7 @@ export default function Home() {
       id: 3,
       name: "Skin Care",
       image:
-        "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2F3EqTNCefc-AyufnEbaUALX0Gg-ZdoQLDIbcjzpYEvQ4.jpg?csig=AAAAAAAAAAAAAAAAAAAAAMNUgHlpJnvoQU3JaRkcTmfrWO49JvQBDo5843y2bfA0&exp=1744147491&signer=media-rpc&token=AAIAAU0ALzNFcVROQ2VmYy1BeXVmbkViYVVBTFgwR2ctWmRvUUxESWJjanpwWUV2UTQuanBnAAAAAAGWF0qouNlMevrRqNyoJYCWYWPDKde2wX1xFgbu-jv796Y6NsTf",
+        "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2F3EqTNCefc-AyufnEbaUALX0Gg-ZdoQLDIbcjzpYEvQ4.jpg?csig=AAAAAAAAAAAAAAAAAAAAABaesHUPV7IgYhlQwnVJK5nPKo0OLNObFO71D3z7QcK8&exp=1744327491&signer=media-rpc&token=AAIAAU0ALzNFcVROQ2VmYy1BeXVmbkViYVVBTFgwR2ctWmRvUUxESWJjanpwWUV2UTQuanBnAAAAAAGWIgU9uLb9RmxEVwkxEeknFuUduIfHQU426ys2gPQ_RDHHge6j%201600w,%20https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2FgK0KhBI2F-cM0Ni3i77VE4ixC4M97QI9UGoYsbOejUY.jpg?csig=AAAAAAAAAAAAAAAAAAAAAARyROuRUkl1KD3tsW771ZUEQj35cyHen20w_tqVmgci&exp=1744326534&signer=media-rpc&token=AAIAAU0AL2dLMEtoQkkyRi1jTTBOaTNpNzdWRTRpeEM0TTk3UUk5VUdvWXNiT2VqVVkuanBnAAAAAAGWIfajcOXkQgx7qNA4VJdD1FDDBTNxAnvrzOYcBaUL1xTWvK0u%20800w,%20https://marketplace.canva.com/MADT2h8YN6E/1/thumbnail_large-2/canva-woman-at-home-having-skin-care-routine-MADT2h8YN6E.jpg%20550w,%20https://marketplace.canva.com/MADT2h8YN6E/1/thumbnail-2/canva-woman-at-home-having-skin-care-routine-MADT2h8YN6E.jpg%20200w",
     },
   ];
   
@@ -80,7 +56,7 @@ export default function Home() {
             mainCardButton={"learn more"}
           />
           <CategoriesSection categories={categories} categoriesTitle={"Confira o melhor do autocuidado"} />
-          <CarouselSection posts={posts} />
+          <CarouselSection />
         </div>
       </div>
       <Footer />
