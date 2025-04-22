@@ -1,0 +1,82 @@
+.cardContainer {
+  display: flex;
+  justify-content: center; 
+  gap: 30px; 
+  padding: 20px;
+  flex-wrap: nowrap; 
+  overflow-x: auto; 
+}
+
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 500px; 
+  background-color: #f0f8ff; 
+  /* border-radius: 8px; */
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05); 
+}
+
+.image {
+  width: 100%;
+  height: 300px; 
+  object-fit: cover;
+}
+.cardContent {
+  text-align: center;
+  padding: 15px;
+  background-color: #f0f8ff; 
+}
+
+.name {
+  font-size: 1.2rem; 
+  font-weight: bold;
+  color: #3574bb;
+  margin-bottom: 5px;
+}
+
+.position {
+  font-size: 1rem; 
+  color: #555;
+}
+.objectives {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #3574bb;
+  margin-top: 20px;
+}
+
+.objectiveCards {
+  display: flex;
+  flex-direction: row;
+  gap: 30px; 
+  margin-top: 30px;
+  padding: 10px;
+  justify-content: center; 
+  margin-bottom: 5rem;
+}
+
+.objectiveCards::-webkit-scrollbar {
+  display: none; 
+}
+
+.objectiveCard {
+  flex: 0 0 auto; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 200px;
+  background-color: #f0f8ff;
+  border-radius: 8px;
+  text-align: center;
+  padding: 10px;
+}

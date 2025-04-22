@@ -2,11 +2,19 @@ import Header from "@/components/header";
 import styles from "./page.module.css";
 import Footer from "@/components/footer";
 import MainCardSection from "@/components/mainCardSection";
-import CategoriesCard from "@/components/categoriesCard";
-import CarouselSection from "@/components/carouselSection";
 import CategoriesSection from "@/components/categoriesSection";
+import CarouselSection from "@/components/carouselSection";
 
 export default function Home() {
+  const navItens = [
+    { label: "Início", href: "/", active: true },
+    { label: "Dicas", href: "/feed", active: false },
+    { label: "Curiosidades", href: "/curiosidades", active: false },
+    { label: "Contato", href: "/curiosidades", active: false },
+    { label: "Sobre Nós", href: "/sobrenos", active: false },
+    { label: "Login", href: "/login", active: false },
+  ];
+
 
   // Array de dados dos memes para serem passados como props
   const posts = [
@@ -57,7 +65,7 @@ export default function Home() {
 
   return (
     <div className={styles.container}>
-      <Header logo="MemeVerse" />
+      <Header logo="MemeVerse" navItens={navItens} />
       <div className={styles.mainContent}>
         <div className={styles.contentArea}>
           <MainCardSection
