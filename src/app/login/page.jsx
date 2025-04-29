@@ -6,7 +6,7 @@ import Footer from "@/components/footer";
 import styles from "./login.module.css";
 
 export default function Login() {
-    const url = "http://localhost:4001/auth/register";
+    const url = "http://localhost:4000/auth/register";
 
     const [name, setName] = useState(" ");
     const [email, setEmail] = useState(" ");
