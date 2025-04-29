@@ -50,6 +50,10 @@
     box-shadow: 0 0 5px var(--dark-blue);
   }
 
+  .input::placeholder {
+    color: var(--dark-blue);
+  }
+
   .button {
     padding: 1rem;
     background-color: var(--second-light-blue);
