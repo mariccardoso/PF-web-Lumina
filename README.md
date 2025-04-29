@@ -38,6 +38,7 @@ Lumina Bloom é um blog de autoajuda e desenvolvimento pessoal, criado como part
     npm run dev
     ```
 
+
 4. **Acesse no navegador**:
     O projeto estará disponível em `http://localhost:3000`.
 

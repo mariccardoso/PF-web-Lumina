@@ -6,7 +6,7 @@ import styles from "./cabelos.module.css";
 export default function Cabelos() {
     return (
         <div className={styles.container}>
-            <Header logo="MemeVerse" />
+            <Header/>
             <div className={styles.mainContent}>
                 <div className={styles.contentArea}>
                     <MainCardSection
