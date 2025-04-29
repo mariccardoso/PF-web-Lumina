@@ -1,0 +1,74 @@
+.videoSectionContainer {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  gap: 20px; 
+  margin: 5rem;
+}
+
+.videoAndDescription {
+  display: flex; 
+  align-items: flex-start; 
+  justify-content: flex-start; 
+  gap: 2rem; 
+  width: 100%; 
+}
+
+.videoContainer {
+  flex: 0.6; 
+  max-width: 20rem; 
+  height: 40vh; 
+}
+
+.videoContainer iframe {
+  height: 100%; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.textContainer {
+  flex: 1.4;
+  display: flex;
+  flex-direction: column; 
+  justify-content: flex-start; 
+  max-width: 50rem; 
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 1.5;
+  text-align: left; 
+  margin-top: 1rem;
+  color: #3574bb;
+}
+
+.description {
+  font-size: 1.3rem;
+  line-height: 1.8; 
+  text-align: justify;
+  margin-top: 0;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: flex-end; 
+  margin-top: 1rem;
+  font-family: "EB Garamond", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.button {
+  width: 10rem; 
+  height: 4vh;
+  background-color: #3574bb; 
+  color: white; 
+  border: none; 
+  border-radius: rem;
+  cursor: pointer;
+  font-size: 1rem; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button:hover {
+  background-color: #285a8e; 
+}
