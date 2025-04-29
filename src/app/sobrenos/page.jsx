@@ -4,18 +4,10 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 
 const Sobrenos = () => {
-  const navItens = [
-    { label: "Início", href: "/", active: false },
-    { label: "Dicas", href: "/feed", active: false },
-    { label: "Curiosidades", href: "/curiosidades", active: false },
-    { label: "Contato", href: "/curiosidades", active: false },
-    { label: "Sobre Nós", href: "/sobrenos", active: true },
-    { label: "Login", href: "/login", active: false },
-  ];
 
   return (
     <div className={styles.container}>
-      <Header logo="MemeVerse" navItens={navItens} />
+      <Header />
       <p className={styles.title}>Seja bem-vinda ao nosso mundo</p>
       <p className={styles.description}>
         A Lumina nasceu da amizade, da paixão por beleza e do desejo de inspirar
