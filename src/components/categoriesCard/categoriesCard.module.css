@@ -53,3 +53,17 @@
       font-family: var(--body-font);
       text-align: left;
   }
+
+  @media (max-width: 1024px) {
+    .categoriesCard {
+      width: 100%;
+      height: 8rem;
+    }
+    .categoriesCardImageContainer h2{
+      font-size: 1.2rem;
+    }
+    .categoriesCardImageContainer {
+      height: 8rem;
+    }
+    
+  }
