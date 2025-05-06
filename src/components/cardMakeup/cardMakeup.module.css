@@ -1,0 +1,68 @@
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin: 50px 0;
+}
+
+.card {
+  width: 200px;
+  height: 300px;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.cardText {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  background-color: #3573bbbb;
+  color: white;
+  font-size: 15px;
+  font-family: "EB Garamond", Tahoma, Geneva, Verdana, sans-serif;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover .cardImage {
+  transform: translateX(20px);
+}
+
+.card:hover .cardText {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.objectives {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3574bb;
+  margin-bottom: 0.5rem; /* Adiciona espaço entre o texto e os cards */
+}
+
+.description {
+  text-align: center;
+  font-size: 1.3rem;
+  color: #242323; 
+  margin-bottom: 1rem; 
+  line-height: 1.5; 
+}
