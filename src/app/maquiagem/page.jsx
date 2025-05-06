@@ -1,3 +1,4 @@
+import CardMakeup from "@/components/cardMakeup";
 import styles from "./maquiagem.module.css";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
@@ -49,6 +50,8 @@ const Maquiagem = () => {
         pdfLink="/assets/pdf/Produtoparalabios.pdf"
         buttonText="Baixar PDF"
       />
+
+      <CardMakeup />
       <Footer />
     </div>
   );
