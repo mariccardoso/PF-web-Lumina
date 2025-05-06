@@ -16,8 +16,8 @@
 
 .videoContainer {
   flex: 0.6; 
-  max-width: 20rem; 
-  height: 40vh; 
+  max-width: 50rem; 
+  height: 60vh; 
 }
 
 .videoContainer iframe {
@@ -42,7 +42,7 @@
 }
 
 .description {
-  font-size: 1.3rem;
+  font-size: 1rem;
   line-height: 1.8; 
   text-align: justify;
   margin-top: 0;
@@ -57,18 +57,21 @@
 
 .button {
   width: 10rem; 
-  height: 4vh;
+  height: 5vh;
   background-color: #3574bb; 
   color: white; 
   border: none; 
-  border-radius: rem;
+  /* border-radius: rem; */
   cursor: pointer;
   font-size: 1rem; 
   display: flex;
   align-items: center;
   justify-content: center;
+  text-decoration: none; 
 }
 
 .button:hover {
   background-color: #285a8e; 
 }
+
+
