@@ -5,7 +5,7 @@ import Header from "@/components/header";
 
 const Sobrenos = () => {
   const navItens = [
-    { label: "Início", href: "/", active: false },
+    { label: "Início", href: "/", active:  },
     { label: "Dicas", href: "/feed", active: false },
     { label: "Curiosidades", href: "/curiosidades", active: false },
     { label: "Contato", href: "/curiosidades", active: false },
