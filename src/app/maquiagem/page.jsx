@@ -6,7 +6,7 @@ import MainCardSection from "@/components/mainCardSection";
 import VideoSection from "@/components/videoSection";
 import VideoSectionRight from "@/components/videoSectionRight";
 
-const Maquiagem = () => {
+export default function  Maquiagem () {
   const navItens = [
     { label: "Início", href: "/", active: false },
     { label: "Dicas", href: "/feed", active: false },
@@ -57,4 +57,3 @@ const Maquiagem = () => {
   );
 };
 
-export default Maquiagem;
