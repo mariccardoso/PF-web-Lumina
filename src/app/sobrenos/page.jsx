@@ -3,9 +3,9 @@ import styles from "./sobrenos.module.css";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 
-const Sobrenos = () => {
+export default function Sobrenos () {
   const navItens = [
-    { label: "Início", href: "/", active:  },
+    { label: "Início", href: "/", active: false },
     { label: "Dicas", href: "/feed", active: false },
     { label: "Curiosidades", href: "/curiosidades", active: false },
     { label: "Contato", href: "/curiosidades", active: false },
@@ -16,7 +16,7 @@ const Sobrenos = () => {
 
   return (
     <div className={styles.container}>
-      <Header />
+      <Header navItens={navItens} />
       <p className={styles.title}>Seja bem-vinda ao nosso mundo</p>
       <p className={styles.description}>
         A Lumina nasceu da amizade, da paixão por beleza e do desejo de inspirar
@@ -39,5 +39,3 @@ const Sobrenos = () => {
     </div>
   );
 };
-
-export default Sobrenos;

@@ -141,19 +141,54 @@
 
 /* Responsividade */
 @media (max-width: 768px) {
-  .leftSlide, .rightSlide {
-    transform: translateX(0) scale(0.85);
-    opacity: 0;
-    pointer-events: none;
-  }
-  
   .carouselContainer {
-    height: 16rem;
+    height: auto;
+    padding: 0 1rem;
   }
-  
+
+  .carouselTrack {
+    position: relative;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+  }
+
+  .leftSlide,
+  .rightSlide {
+    display: none; /* Esconde os cards laterais */
+  }
+
+  .carouselSlide {
+    position: relative;
+    transform: scale(1);
+    opacity: 1;
+    width: 100%;
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+
   .postCard {
-    width: 90%;
-    max-width: 20rem;
-    height: 15rem;
+    width: 100%;
+    max-width: 90vw;
+    height: auto;
+  }
+
+  .carouselButton {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
+  }
+
+  .prevButton {
+    left: 5px;
+  }
+
+  .nextButton {
+    right: 5px;
+  }
+
+  .title {
+    font-size: 1.25rem;
+    text-align: center;
   }
 }

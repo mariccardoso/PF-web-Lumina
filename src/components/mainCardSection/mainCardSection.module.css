@@ -104,3 +104,37 @@
 .mainCardImage:hover {
   transform: scale(1.05);
 }
+
+@media (max-width: 768px) {
+  .mainCardSection {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .mainCardImageContainer {
+    width: 100%;
+    height: 15rem; /* altura da imagem */
+  }
+
+  .mainCardImageContainer::after{
+    width: 0%;
+  }
+
+  .mainCardContent {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .mainCardTitle {
+    font-size: 1.5rem;
+  }
+
+  .mainCardDescription {
+    font-size: 16px;
+  }
+
+  .buttonContainer {
+    width: 100%;
+    justify-content: center;
+  }
+}
