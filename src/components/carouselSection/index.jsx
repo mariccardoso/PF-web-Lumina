@@ -6,7 +6,7 @@ import PostCard from "../postCard";
 import axios from "axios";
 
 const CarouselSection = ({ carouselTitle }) => {
-  const url = "http://localhost:4000/post";
+  const url = "http://localhost:5000/post";
 
   const [posts, setPosts] = useState([]);
 
@@ -15,6 +15,7 @@ const CarouselSection = ({ carouselTitle }) => {
       try {
         const response = await axios.get(url); // Faz a requisição para a API
         setPosts(response.data); // Atualiza o estado conpmm os posts recebidos
+        console.log(posts)
       } catch (error) {
         console.error("Erro ao buscar postagens:");
       }
@@ -154,12 +155,14 @@ const CarouselSection = ({ carouselTitle }) => {
         <button
           className={`${styles.carouselButton} ${styles.prevButton}`}
           onClick={prevSlide}
+          aria-label="Slide anterior"
         >
           &lt;
         </button>
         <button
           className={`${styles.carouselButton} ${styles.nextButton}`}
           onClick={nextSlide}
+          aria-label="Próximo slide"
         >
           &gt;
         </button>

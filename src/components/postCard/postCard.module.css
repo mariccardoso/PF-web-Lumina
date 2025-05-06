@@ -37,3 +37,13 @@
     opacity: 0.9;
   }
   
+  @media (max-width: 768px) {
+    .card {
+      width: 100%;
+      height: 12rem;
+    }
+  
+    .title {
+      font-size: 0.85rem;
+    }
+  }

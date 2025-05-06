@@ -100,3 +100,25 @@
     color: white;
     transform: translateY(-3px);
   }
+
+  @media (max-width: 768px) {
+    .footerTop {
+      flex-direction: column;
+      align-items: center;
+    }
+    .footerNavContainer {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+  
+    .footerNavSection {
+      text-align: left;
+    }
+  
+    .footerBottom {
+      gap: 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
