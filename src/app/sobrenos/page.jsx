@@ -16,7 +16,7 @@ const Sobrenos = () => {
 
   return (
     <div className={styles.container}>
-      <Header />
+      <Header navItens={navItens} />
       <p className={styles.title}>Seja bem-vinda ao nosso mundo</p>
       <p className={styles.description}>
         A Lumina nasceu da amizade, da paixão por beleza e do desejo de inspirar
