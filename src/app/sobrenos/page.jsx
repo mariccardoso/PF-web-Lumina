@@ -10,7 +10,6 @@ const Sobrenos = () => {
     { label: "Curiosidades", href: "/curiosidades", active: false },
     { label: "Contato", href: "/curiosidades", active: false },
     { label: "Sobre Nós", href: "/sobrenos", active: true},
-    { label: "Maquiagens", href: "/maquiagem", active: false },
     { label: "Login", href: "/login", active: false },
   ];
 

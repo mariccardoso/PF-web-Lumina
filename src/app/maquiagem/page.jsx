@@ -11,7 +11,6 @@ const Maquiagem = () => {
     { label: "Curiosidades", href: "/curiosidades", active: false },
     { label: "Contato", href: "/curiosidades", active: false },
     { label: "Sobre Nós", href: "/sobrenos", active: false },
-    { label: "Maquiagens", href: "/maquiagem", active: true },
     { label: "Login", href: "/login", active: false },
   ];
 

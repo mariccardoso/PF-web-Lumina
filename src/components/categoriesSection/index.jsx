@@ -7,7 +7,7 @@ const CategoriesSection = ({categories, categoriesTitle}) => {
 <section className={styles.categoriesSection}>
   <h2 className={styles.categoriesTitle}>{categoriesTitle}</h2>
   <div className={styles.categoriesContainer}>
-  <CategoriesCard categories={categories} />
+  <CategoriesCard categories={categories}/>
   </div>
 </section>
 

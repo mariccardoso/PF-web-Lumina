@@ -5,7 +5,8 @@ const CategoriesCard = ({categories}) => {
   return (
     <>
       {categories.map((category) => (
-        <div style={{backgroundImage: `url(${category.image})`}} className={styles.categoriesCard} key={category.id}>
+        <a key={category.id} href={category.link}>
+        <div style={{backgroundImage: `url(${category.image})`}} className={styles.categoriesCard} > 
           {/* <div className={styles.categoriesCardContent}>
             <h2 className={styles.categoriesCardTitle}>{category.name}</h2>
           </div> */}
@@ -13,7 +14,9 @@ const CategoriesCard = ({categories}) => {
             <h2 className={styles.categoriesCardTitle}>{category.name}</h2>
             </div>
         </div>
+        </a>        
       ))}
+
     </>
   );
 };
