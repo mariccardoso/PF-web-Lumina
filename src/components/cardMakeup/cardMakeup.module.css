@@ -1,13 +1,15 @@
 .cardContainer {
   display: flex;
-  justify-content: center;
-  gap: 50px;
+  flex-direction: row; 
+  align-items: center; 
+  justify-content: center; 
+  gap: 30px; 
   margin: 50px 0;
 }
 
 .card {
-  width: 200px;
-  height: 300px;
+  width: 250px; 
+  height: 350px; 
   background-color: #f0f0f0;
   display: flex;
   align-items: center;
@@ -56,13 +58,55 @@
   font-size: 2rem;
   font-weight: bold;
   color: #3574bb;
-  margin-bottom: 0.5rem; /* Adiciona espaço entre o texto e os cards */
+  margin-bottom: 0.5rem;
 }
 
 .description {
   text-align: center;
   font-size: 1.3rem;
-  color: #242323; 
-  margin-bottom: 1rem; 
-  line-height: 1.5; 
+  color: #242323;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Responsividade para telas menores que 768px (tablets e celulares) */
+@media (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column; 
+    gap: 20px; 
+    margin: 20px 0;
+  }
+
+  .card {
+    width: 200px; 
+    height: 300px; 
+  }
+
+  .objectives {
+    font-size: 2rem; 
+  }
+
+  .description {
+    font-size: 1.2rem; 
+  }
+}
+
+/* Responsividade para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  .cardContainer {
+    gap: 15px; 
+  }
+
+  .card {
+    width: 180px; 
+    height: 270px; 
+  }
+
+  .objectives {
+    font-size: 1.5rem; 
+  }
+
+  .description {
+    font-size: 1rem; 
+  }
 }

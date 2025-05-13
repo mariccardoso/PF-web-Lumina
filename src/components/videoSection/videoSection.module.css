@@ -1,76 +1,144 @@
 .videoSectionContainer {
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-  gap: 20px; 
+  flex-direction: column; /* Alinha os elementos em coluna por padrão */
+  align-items: center;
+  gap: 20px;
   margin: 5rem;
 }
 
 .videoAndDescription {
-  display: flex; 
-  align-items: flex-start; 
-  justify-content: flex-start; 
-  gap: 2rem; 
-  width: 100%; 
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+  width: 100%;
 }
 
 .videoContainer {
-  flex: 0.6; 
-  max-width: 50rem; 
-  height: 60vh; 
+  flex: 0.6;
+  max-width: 50rem;
+  height: auto; 
 }
 
 .videoContainer iframe {
-  height: 100%; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  width: 300px; 
+  height: 400px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 .textContainer {
   flex: 1.4;
   display: flex;
-  flex-direction: column; 
-  justify-content: flex-start; 
-  max-width: 50rem; 
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 50rem;
 }
 
 .title {
-  font-size: 2rem;
+  font-size: 2.1rem;
   line-height: 1.5;
-  text-align: left; 
+  text-align: left;
   margin-top: 1rem;
   color: #3574bb;
 }
 
 .description {
-  font-size: 1rem;
-  line-height: 1.8; 
+  font-size: 1.2rem;
+  line-height: 1.8;
   text-align: justify;
   margin-top: 0;
 }
 
 .buttonContainer {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   margin-top: 1rem;
   font-family: "EB Garamond", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .button {
-  width: 10rem; 
+  width: 10rem;
   height: 5vh;
-  background-color: #3574bb; 
-  color: white; 
-  border: none; 
+  background-color: #3574bb;
+  color: white;
+  border: none;
   cursor: pointer;
-  font-size: 1rem; 
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 .button:hover {
-  background-color: #285a8e; 
+  background-color: #285a8e;
 }
 
+/* Responsividade para telas menores que 1024px (tablets e laptops menores) */
+@media (max-width: 1024px) {
+  .videoAndDescription {
+    gap: 1.5rem; 
+  }
 
+  .videoContainer {
+    max-width: 40rem; 
+  }
+
+  .textContainer {
+    max-width: 40rem; 
+  }
+}
+
+/* Responsividade para telas menores que 768px (tablets e celulares maiores) */
+@media (max-width: 768px) {
+  .videoAndDescription {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+  }
+
+  .videoContainer {
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+  }
+
+  .textContainer {
+    width: 100%; 
+    text-align: center; 
+  }
+
+  .title {
+    font-size: 1.5rem; 
+  }
+
+  .description {
+    font-size: 1.1rem; 
+  }
+
+  .buttonContainer {
+    justify-content: center; 
+  }
+}
+
+/* Responsividade para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  .videoContainer iframe {
+    width: 100%; 
+    height: auto;
+  }
+
+  .title {
+    font-size: 1.2rem; 
+  }
+
+  .description {
+    font-size: 1rem; 
+  }
+
+  .button {
+    font-size: 0.9rem; 
+    width: 100%; 
+  }
+}

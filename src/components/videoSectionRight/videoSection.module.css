@@ -8,7 +8,7 @@
 
 .videoAndDescription {
   display: flex;
-  flex-direction: row-reverse; /* Inverte a ordem dos elementos */
+  flex-direction: row-reverse; 
   align-items: flex-start;
   justify-content: flex-start;
   gap: 2rem;
@@ -16,15 +16,17 @@
 }
 
 .videoContainer {
-  flex: 0.6; 
-  max-width: 50rem; 
-  height: 60vh; 
+  flex: 0.6;
+  max-width: 50rem;
+  height: auto; 
 }
 
 .videoContainer iframe {
-  height: 100%; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  width: 300px; 
+  height: 400px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
 
 .textContainer {
   flex: 1.4;
@@ -76,3 +78,70 @@
 }
 
 
+/* Responsividade para telas menores que 1024px (tablets e laptops menores) */
+@media (max-width: 1024px) {
+  .videoAndDescription {
+    gap: 1.5rem; 
+  }
+
+  .videoContainer {
+    max-width: 40rem; 
+  }
+
+  .textContainer {
+    max-width: 40rem; 
+  }
+}
+
+/* Responsividade para telas menores que 768px (tablets e celulares maiores) */
+@media (max-width: 768px) {
+  .videoAndDescription {
+    flex-direction: column; 
+    align-items: center; 
+    gap: 20px; 
+  }
+
+  .videoContainer {
+    width: 100%; 
+    max-width: 100%; 
+    height: auto; 
+  }
+
+  .textContainer {
+    width: 100%; 
+    text-align: center; 
+  }
+
+  .title {
+    font-size: 1.5rem; 
+  }
+
+  .description {
+    font-size: 1.1rem; 
+  }
+
+  .buttonContainer {
+    justify-content: center; 
+  }
+}
+
+/* Responsividade para telas menores que 480px (celulares pequenos) */
+@media (max-width: 480px) {
+  .videoContainer iframe {
+    width: 100%; 
+    height: auto;
+  }
+
+  .title {
+    font-size: 1.2rem; 
+  }
+
+  .description {
+    font-size: 1rem; 
+  }
+
+  .button {
+    font-size: 0.9rem; 
+    width: 100%; 
+  }
+}

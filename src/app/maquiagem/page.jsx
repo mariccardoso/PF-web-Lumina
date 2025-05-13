@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import MainCardSection from "@/components/mainCardSection";
 import VideoSection from "@/components/videoSection";
 import VideoSectionRight from "@/components/videoSectionRight";
+import CarrosselTest from "@/components/carrosselTest";
 
 export default function  Maquiagem () {
   const navItens = [
@@ -51,6 +52,7 @@ export default function  Maquiagem () {
       />
 
       <CardMakeup />
+      <CarrosselTest />
       <Footer />
     </div>
   );
