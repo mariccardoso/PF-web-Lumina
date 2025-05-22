@@ -64,7 +64,7 @@ export default function CuidadosCapilares() {
         pdfLink="/assets/pdf/RotinaCapilar.pdf"
         buttonText="Baixar PDF"
       />
-      <VideoSectionRight
+      {/* <VideoSectionRight
         videoSrc="https://www.youtube.com/embed/c7SRPDpkxf8"
         title="Tratamentos para crescimento e fortalecimento dos fios"
         description="Descubra tratamentos eficazes para estimular o crescimento saudável dos cabelos e fortalecer a raiz. No vídeo, mostramos receitas caseiras e produtos recomendados. Baixe o PDF com um guia completo de ingredientes naturais e dicas para evitar a queda capilar."
@@ -77,7 +77,7 @@ export default function CuidadosCapilares() {
         description="Saiba como proteger seus fios do uso frequente de secador, chapinha e procedimentos químicos. No vídeo, veja técnicas de proteção térmica e cuidados pós-química. Baixe o PDF com recomendações de produtos e cronograma capilar para manter os cabelos sempre saudáveis."
         pdfLink="/assets/pdf/ProtecaoCapilar.pdf"
         buttonText="Baixar PDF"
-      />
+      /> */}
      <CardHair 
      hashtag="#DicasCapilares"
   cards={[

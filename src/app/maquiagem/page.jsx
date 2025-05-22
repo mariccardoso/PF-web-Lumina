@@ -5,6 +5,7 @@ import Header from "@/components/header";
 import MainCardSection from "@/components/mainCardSection";
 import VideoSection from "@/components/videoSection";
 import VideoSectionRight from "@/components/videoSectionRight";
+import CardHair from "@/components/cardHair";
 
 export default function Maquiagem() {
   const navItens = [
@@ -72,7 +73,39 @@ export default function Maquiagem() {
         pdfLink="/assets/pdf/Produtoparalabios.pdf"
         buttonText="Baixar PDF"
       />
-
+    <CardHair 
+        hashtag="#DicasCapilares"
+     cards={[
+       {
+         image: "https://www.segs.com.br/media/k2/items/cache/0149e3a2a6780712e9869e50498bae57_XL.jpg",
+         alt: "Hidratação",
+         text: "Hidratação profunda para fios saudáveis.",
+         buttonText: "Saiba mais",
+         buttonLink: "https://www.eudora.com.br/guia-da-beleza/5-dicas-para-fazer-uma-hidratacao-poderosa/"
+       },
+       {
+         image: "https://topview.com.br/wp-content/uploads/2024/06/WhatsApp-Image-2024-06-04-at-14.48.06-450x450.jpeg",
+         alt: "Nutrição",
+         text: "Nutrição que devolve o brilho natural.",
+         buttonText: "Saiba mais",
+         buttonLink: "https://www.loreal-paris.com.br/cabelo-danificado?&&&&gad_source=1&gad_campaignid=21517385425&gbraid=0AAAAADpCDXgIZSHTWiW4MlrMH3Be0PNxI&gclid=Cj0KCQjwlrvBBhDnARIsAHEQgOTxoc_y7Jx4U5IpNjbMIGj1Is9pk5VK8qJvJjAQSi5TrofGhBd2ohEaAsZMEALw_wcB&gclsrc=aw.ds"
+       },
+       {
+         image: "https://img.freepik.com/fotos-premium/mulher-morena-linda-de-cabelos-longos-com-modelo-feminino-de-penteado-de-beleza-tiro-do-estudio-branco-isolado_431835-4170.jpg",
+         alt: "Reconstrução",
+         text: "Para cabelos fortes e resistentes.",
+         buttonText: "Saiba mais",
+         buttonLink: "https://casakose.com.br/dicas-para-o-cabelo-crescer/?srsltid=AfmBOorBctgu_j-tSqXSZbCUrnYESI6dOYhKafwyeOuJxEmY-wSjxkwV"
+       },
+       {
+         image: "https://riuspjr.com.br/wp-content/uploads/2024/06/produto-capilar-instagram.webp",
+         alt: "Proteção",
+         text: "Proteção térmica para evitar danos.",
+         buttonText: "Saiba mais",
+         buttonLink: "https://www.mreviews.com.br/1281/top-10-melhores-protetores-termicos-de-cabelo-de-2024?gad_source=1&gad_campaignid=21113390563&gbraid=0AAAAAo77clWJ4DkCRuQx9_tA5jAaP0Kkb&gclid=Cj0KCQjwlrvBBhDnARIsAHEQgOT-sWUh6OrGCkhX-uCHmIeyoniKsfie-JWGbqL7_1QfVghPaNSxuMAaArLAEALw_wcB"
+       },
+     ]}
+   />
       <Footer />
     </div>
   );
