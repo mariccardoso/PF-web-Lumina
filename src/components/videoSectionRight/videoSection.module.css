@@ -45,7 +45,7 @@
 }
 
 .description {
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.8; 
   text-align: justify;
   margin-top: 0;
@@ -61,10 +61,10 @@
 .button {
   width: 10rem; 
   height: 5vh;
-  background-color: #3574bb; 
+  background-color: #a7d5ec; 
   color: white; 
   border: none; 
-  /* border-radius: rem; */
+  /* border-radius: 1rem; */
   cursor: pointer;
   font-size: 1rem; 
   display: flex;
