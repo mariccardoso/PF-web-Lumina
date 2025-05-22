@@ -30,11 +30,10 @@ const CardAboutUs = () => {
     {
       name: "Sophia Gomes",
       position: "Desenvolvedora",
-      image:
-        "https://arcosmodels.com/wp-content/uploads/2021/08/capa-site-1-290x380.jpg",
+      image: "./assets/sophiagomes.jpeg",
     },
   ];
-  
+
   const objectives = [
     {
       icon: <CheckCircle size={40} color="#3574bb" />,
@@ -50,15 +49,14 @@ const CardAboutUs = () => {
     },
     {
       icon: <Star size={40} color="#3574bb" />,
-      description: "Alcançar reconhecimento por meio de resultados excepcionais.",
+      description:
+        "Alcançar reconhecimento por meio de resultados excepcionais.",
     },
     {
       icon: <Heart size={40} color="#3574bb" />,
       description: "Fomentar um ambiente de trabalho saudável e inclusivo.",
     },
-  
   ];
-
 
   return (
     <div>
@@ -82,7 +80,9 @@ const CardAboutUs = () => {
         {objectives.map((objective, index) => (
           <div key={index} className={styles.objectiveCard}>
             {objective.icon}
-            <p className={styles.objectiveDescription}>{objective.description}</p>
+            <p className={styles.objectiveDescription}>
+              {objective.description}
+            </p>
           </div>
         ))}
       </div>

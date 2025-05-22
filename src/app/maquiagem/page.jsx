@@ -5,9 +5,8 @@ import Header from "@/components/header";
 import MainCardSection from "@/components/mainCardSection";
 import VideoSection from "@/components/videoSection";
 import VideoSectionRight from "@/components/videoSectionRight";
-import CarrosselTest from "@/components/carrosselTest";
 
-export default function  Maquiagem () {
+export default function Maquiagem() {
   const navItens = [
     { label: "Início", href: "/", active: false },
     { label: "Dicas", href: "/feed", active: false },
@@ -29,6 +28,29 @@ export default function  Maquiagem () {
         mainCardImageAlt={"Pinguins"}
         mainCardButton={"learn more"}
       />
+
+      <CardMakeup
+        hashtag="#CuidadosCapilares"
+        description="Destaque a beleza dos seus cabelos com dicas e produtos especiais."
+        cards={[
+          {
+            image: "https://i.pinimg.com/736x/1f/cd/e9/1fcde9e6358970db68499980d3c0640b.jpg",
+            alt: "Hidratação",
+            text: "Hidratação profunda para fios saudáveis.",
+          },
+          {
+            image: "https://i.pinimg.com/736x/24/4a/65/244a65303801795d8c3c612a8ebc49c9.jpg",
+            alt: "Nutrição",
+            text: "Nutrição que devolve o brilho natural.",
+          },
+          {
+            image: "https://i.pinimg.com/736x/02/e2/57/02e257a48b4348478d022a8616f9f8c5.jpg",
+            alt: "Reconstrução",
+            text: "Reconstrução para cabelos fortes e resistentes.",
+          },
+        ]}
+      />
+
       <VideoSection
         videoSrc="https://www.youtube.com/embed/tO0U_QM4Gjc?autoplay=1&mute=1"
         title="Deixe sua beleza brilhar com nossas dicas de maquiagem."
@@ -51,10 +73,7 @@ export default function  Maquiagem () {
         buttonText="Baixar PDF"
       />
 
-      <CardMakeup />
-      <CarrosselTest />
       <Footer />
     </div>
   );
-};
-
+}

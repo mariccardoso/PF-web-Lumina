@@ -23,7 +23,7 @@ export default function Home() {
       name: "Cuidados Capilares",
       image:
         "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2FCWIrM9mY133F45QD0DxwmtFT1iyH3DFPm93HdhxEnS4.jpg?csig=AAAAAAAAAAAAAAAAAAAAAJ3-g-UH3PIYPww1t7KMkuI5j9cdEmS-c-wNLGQ2Mo4v&exp=1744325557&signer=media-rpc&token=AAIAAU0AL0NXSXJNOW1ZMTMzRjQ1UUQwRHh3bXRGVDFpeUgzREZQbTkzSGRoeEVuUzQuanBnAAAAAAGWIee7CEtV60hWHHb-GwcYhL6-pVwviLeusIz-dYVpwma8aLuG",
-      link: "/cabelos",
+      link: "/cuidadosCapilares",
     },
     {
       id: 2,
