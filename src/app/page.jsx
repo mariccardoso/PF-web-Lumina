@@ -22,7 +22,7 @@ export default function Home() {
       id: 1,
       name: "Cuidados Capilares",
       image:
-        "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2FCWIrM9mY133F45QD0DxwmtFT1iyH3DFPm93HdhxEnS4.jpg?csig=AAAAAAAAAAAAAAAAAAAAAJ3-g-UH3PIYPww1t7KMkuI5j9cdEmS-c-wNLGQ2Mo4v&exp=1744325557&signer=media-rpc&token=AAIAAU0AL0NXSXJNOW1ZMTMzRjQ1UUQwRHh3bXRGVDFpeUgzREZQbTkzSGRoeEVuUzQuanBnAAAAAAGWIee7CEtV60hWHHb-GwcYhL6-pVwviLeusIz-dYVpwma8aLuG",
+        "https://tudoela.com/wp-content/uploads/2017/08/pentear-o-cabelo-corretamente-e1503367651507.jpg",
       link: "/cuidadosCapilares",
     },
     {
@@ -36,7 +36,7 @@ export default function Home() {
       id: 3,
       name: "Skin Care",
       image:
-        "https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2F3EqTNCefc-AyufnEbaUALX0Gg-ZdoQLDIbcjzpYEvQ4.jpg?csig=AAAAAAAAAAAAAAAAAAAAABaesHUPV7IgYhlQwnVJK5nPKo0OLNObFO71D3z7QcK8&exp=1744327491&signer=media-rpc&token=AAIAAU0ALzNFcVROQ2VmYy1BeXVmbkViYVVBTFgwR2ctWmRvUUxESWJjanpwWUV2UTQuanBnAAAAAAGWIgU9uLb9RmxEVwkxEeknFuUduIfHQU426ys2gPQ_RDHHge6j%201600w,%20https://media.canva.com/v2/files/uri:ifs%3A%2F%2FM%2FgK0KhBI2F-cM0Ni3i77VE4ixC4M97QI9UGoYsbOejUY.jpg?csig=AAAAAAAAAAAAAAAAAAAAAARyROuRUkl1KD3tsW771ZUEQj35cyHen20w_tqVmgci&exp=1744326534&signer=media-rpc&token=AAIAAU0AL2dLMEtoQkkyRi1jTTBOaTNpNzdWRTRpeEM0TTk3UUk5VUdvWXNiT2VqVVkuanBnAAAAAAGWIfajcOXkQgx7qNA4VJdD1FDDBTNxAnvrzOYcBaUL1xTWvK0u%20800w,%20https://marketplace.canva.com/MADT2h8YN6E/1/thumbnail_large-2/canva-woman-at-home-having-skin-care-routine-MADT2h8YN6E.jpg%20550w,%20https://marketplace.canva.com/MADT2h8YN6E/1/thumbnail-2/canva-woman-at-home-having-skin-care-routine-MADT2h8YN6E.jpg%20200w",
+        "https://www.tendaatacado.com.br/dicas/wp-content/uploads/2021/04/o-que-e-skincare.jpg",
       link: "/skincare",
       },
   ];

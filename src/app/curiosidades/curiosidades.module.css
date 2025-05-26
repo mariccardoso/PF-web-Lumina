@@ -1,0 +1,99 @@
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 5rem;
+  font-family: "EB Garamond", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white);
+  min-height: 100vh;
+  color: #333;
+}
+
+
+/* Conteúdo principal com layout de duas colunas */
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 20px;
+}
+
+.filterBar {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.15);
+  padding: 14px 20px;
+  margin-bottom: 24px;
+  gap: 10px;
+}
+
+.filterInput {
+  border: none;
+  outline: none;
+  font-size: 1.1rem;
+  background: transparent;
+  flex: 1;
+  color: var(--darkest-blue);
+}
+
+.searchIcon {
+  color: var(--darkest-blue);
+  font-size: 1.2rem;
+}
+
+.addButton {
+  background: var(--darkest-blue);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  font-family: "EB Garamond", serif;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.fab {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: var(--darkest-blue);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px rgba(78,93,228,0.18);
+  cursor: pointer;
+  z-index: 1002;
+  transition: background 0.2s;
+}
+
+.fab:hover {
+  background: #3b47b7;
+}
+
+.formOverlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(78,93,228,0.18);
+  padding: 32px 28px;
+  z-index: 1003;
+  min-width: 340px;
+  max-width: 90vw;
+}
+
+.overlayBg {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(78,93,228,0.13);
+  z-index: 1001;
+}
