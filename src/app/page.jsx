@@ -13,9 +13,9 @@ import VideoCarousel from "@/components/videoCarrosel";
 export default function Home() {
   const navItens = [
     { label: "Início", href: "/", active: true },
-    { label: "Dicas", href: "/feed", active: false },
+    // { label: "Dicas", href: "/feed", active: false },
     { label: "Curiosidades", href: "/curiosidades", active: false },
-    { label: "Contato", href: "/curiosidades", active: false },
+    { label: "Contato", href: "/contato", active: false },
     { label: "Sobre Nós", href: "/sobrenos", active: false },
     { label: "Login", href: "/login", active: false },
   ];
@@ -46,20 +46,20 @@ export default function Home() {
     },
   ];
 
-  const meusVideos =  [
-  {
-    title: "Dicas de Autocuidado em 60s",
-    embedUrl: "https://www.youtube.com/embed/uY8HW4ggoKU",
-  },
-  {
-    title: "Tutorial de Maquiagem Natural",
-    embedUrl: "https://www.youtube.com/embed/uY8HW4ggoKU",
-  },
-  {
-    title: "Cuidados com a Pele",
-    embedUrl: "https://www.youtube.com/embed/uY8HW4ggoKU",
-  },
-];
+  const meusVideos = [
+    {
+      title: "Receita de Máscara capilar Caseira",
+      embedUrl: "https://www.youtube.com/embed/0NmpSLkwAo8",
+    },
+    {
+      title: "Tutorial de Maquiagem Natural",
+      embedUrl: "https://www.youtube.com/embed/cosjlPfFDS0",
+    },
+    {
+      title: "Cuidados com a Pele",
+      embedUrl: "https://www.youtube.com/embed/QbjfJwqv2AM",
+    },
+  ];
 
   return (
     <div className={styles.container}>

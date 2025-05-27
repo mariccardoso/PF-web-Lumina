@@ -7,9 +7,9 @@ import FinalSobreNos from "@/components/finalSobrenos";
 export default function Sobrenos () {
   const navItens = [
     { label: "Início", href: "/", active: false },
-    { label: "Dicas", href: "/feed", active: false },
+    // { label: "Dicas", href: "/feed", active: false },
     { label: "Curiosidades", href: "/curiosidades", active: false },
-    { label: "Contato", href: "/curiosidades", active: false },
+    { label: "Contato", href: "/contato", active: false },
     { label: "Sobre Nós", href: "/sobrenos", active: true},
     { label: "Login", href: "/login", active: false },
   ];

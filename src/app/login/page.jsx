@@ -62,6 +62,9 @@ export default function Login() {
                     <p className={styles.registerText}>Não tem uma conta? <a href="/register" className={styles.registerLink}>Cadastre-se</a></p>
                 </div>
             </div>
+            <Footer />
         </div>
-    )
+ )
+
+
 }

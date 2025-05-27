@@ -19,13 +19,13 @@ const CardAboutUs = () => {
       name: "Anna Clara Fiochi",
       position: "Desenvolvedora",
       image:
-        "https://arcosmodels.com/wp-content/uploads/2022/08/AMANDA-ADAM-CAPA-SITE-ARCOS-MODELS-290x380.jpg",
+        "../assets/anna.jpeg",
     },
     {
       name: "Sophia Balico",
       position: "Desenvolvedora",
       image:
-        "https://arcosmodels.com/wp-content/uploads/2024/07/BRUNA-ARGOLLO-PORT-8-1-e1722438294682-290x380.jpeg",
+        "/../assets/sosoloira.jpeg",
     },
     {
       name: "Sophia Gomes",
