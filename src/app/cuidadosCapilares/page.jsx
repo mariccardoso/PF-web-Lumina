@@ -6,8 +6,25 @@ import MainCardSection from "@/components/mainCardSection";
 import VideoSection from "@/components/videoSection";
 import VideoSectionRight from "@/components/videoSectionRight";
 import CardHair from "@/components/cardHair";
+import VideoCarousel from "@/components/videoCarrosel";
+import QuizTest from "@/components/quizTest";
+import FinalPage from "@/components/finalPage";
 
 export default function CuidadosCapilares() {
+  const meusVideos = [
+    {
+      title: "Dicas de Autocuidado",
+      embedUrl: "https://www.youtube.com/embed/zJbPDbyqxpQ", // Corrigido para embed
+    },
+    {
+      title: "Cuidados com os cabelos",
+      embedUrl: "https://www.youtube.com/embed/5zRPlFxIMFg", // Corrigido para embed
+    },
+    {
+      title: "Penteados fáceis para o dia a dia",
+      embedUrl: "https://www.youtube.com/embed/pAv68rPG2ZI", // Corrigido para embed
+    },
+  ];
   const navItens = [
     { label: "Início", href: "/", active: false },
     { label: "Dicas", href: "/feed", active: false },
@@ -113,6 +130,112 @@ export default function CuidadosCapilares() {
           },
         ]}
       />
+      <VideoCarousel
+        carouselTitle="#LuminaVideos"
+        videos={meusVideos}
+        autoplayInterval={5000}
+        prevButtonText="←"
+        nextButtonText="→"
+        captionSuffix="Ver no YouTube"
+        showControls={false}
+        autoplay={false}
+        muted={false}
+        showRelated={true}
+        className="meu-carrossel-personalizado"
+      />
+
+      <QuizTest
+        quiz={[
+          {
+            question: "Com que frequência você hidrata seu cabelo?",
+            options: [
+              { label: "Toda semana", tag: "hidratacao" },
+              { label: "A cada 15 dias", tag: "hidrata_menos" },
+              { label: "Raramente", tag: "raro" },
+              { label: "Nunca", tag: "nunca" },
+            ],
+          },
+          {
+            question: "Qual seu maior desafio com os cabelos?",
+            options: [
+              { label: "Ressecamento", tag: "ressecado" },
+              { label: "Frizz", tag: "frizz" },
+              { label: "Queda", tag: "queda" },
+              { label: "Oleosidade", tag: "oleoso" },
+            ],
+          },
+          {
+            question: "Que tipo de produto você mais usa?",
+            options: [
+              { label: "Máscara de hidratação", tag: "hidratacao" },
+              { label: "Óleo capilar", tag: "oleo" },
+              { label: "Shampoo/Condicionador", tag: "shampoo" },
+              { label: "Leave-in/creme para pentear", tag: "leavein" },
+            ],
+          },
+        ]}
+        results={{
+          hidratacao: {
+            title: "Parabéns pelo cuidado!",
+            description:
+              "Você mantém uma rotina de hidratação, o que é essencial para cabelos saudáveis e bonitos.",
+          },
+          hidrata_menos: {
+            title: "Que tal hidratar mais?",
+            description:
+              "Hidratar o cabelo a cada 15 dias é bom, mas semanalmente pode trazer resultados ainda melhores!",
+          },
+          raro: {
+            title: "Atenção à hidratação!",
+            description:
+              "Seu cabelo pode estar precisando de mais hidratação. Experimente incluir esse passo na sua rotina.",
+          },
+          nunca: {
+            title: "Inclua hidratação já!",
+            description:
+              "Hidratar é fundamental para a saúde dos fios. Comece hoje mesmo!",
+          },
+          ressecado: {
+            title: "Cabelos ressecados",
+            description:
+              "Invista em máscaras nutritivas e óleos para devolver a maciez e o brilho aos fios.",
+          },
+          frizz: {
+            title: "Frizz sob controle",
+            description:
+              "Use produtos antifrizz e finalize com óleos leves para manter os fios alinhados.",
+          },
+          queda: {
+            title: "Queda de cabelo",
+            description:
+              "Procure produtos fortalecedores e, se necessário, consulte um especialista.",
+          },
+          oleoso: {
+            title: "Cabelos oleosos",
+            description:
+              "Prefira shampoos específicos e evite produtos muito pesados na raiz.",
+          },
+          oleo: {
+            title: "Você ama óleos capilares!",
+            description:
+              "Óleos são ótimos para nutrir e dar brilho, mas use com moderação para não pesar.",
+          },
+          shampoo: {
+            title: "Básico e eficiente!",
+            description:
+              "Shampoo e condicionador são essenciais, mas lembre-se de complementar com hidratação.",
+          },
+          leavein: {
+            title: "Leave-in é seu aliado!",
+            description:
+              "Ótima escolha para proteger e modelar os fios no dia a dia.",
+          },
+        }}
+        buttonText="Avançar"
+        restartText="Tentar novamente"
+      />
+
+      <FinalPage />
       <Footer />
     </div>
   );

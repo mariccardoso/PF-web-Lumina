@@ -6,8 +6,25 @@ import MainCardSection from "@/components/mainCardSection";
 import VideoSection from "@/components/videoSection";
 import VideoSectionRight from "@/components/videoSectionRight";
 import CardHair from "@/components/cardHair";
+import VideoCarousel from "@/components/videoCarrosel";
+import QuizTest from "@/components/quizTest";
+import FinalPage from "@/components/finalPage";
 
 export default function SkinCare() {
+  const meusVideos = [
+    {
+      title: "Como ter uma pele saudável",
+      embedUrl: "https://www.youtube.com/embed/91bOxuz8Uy0", // Corrigido para embed
+    },
+    {
+      title: "Produtinho maravilhoso para a pele",
+      embedUrl: "https://www.youtube.com/embed/QJTDgxWOT5w", // Corrigido para embed
+    },
+    {
+      title: "Analisando a rotina de cuidados com a pele",
+      embedUrl: "https://www.youtube.com/embed/2K8GXkFKXAM", // Corrigido para embed
+    },
+  ];
   const navItens = [
     { label: "Início", href: "/", active: false },
     { label: "Dicas", href: "/feed", active: false },
@@ -22,9 +39,7 @@ export default function SkinCare() {
       <Header logo="Lumina" navItens={navItens} />
       <MainCardSection
         mainCardTitle={"Descubra o segredo para uma pele saudável."}
-        mainCardDescription={
-          "Bem-vindo à nossa seção de Skin Care do Lumina!"
-        }
+        mainCardDescription={"Bem-vindo à nossa seção de Skin Care do Lumina!"}
         mainCardImage={
           "https://s2.glbimg.com/kQcijW7kCWWdfS6r83Wnn0Wk3vk=/e.glbimg.com/og/ed/f/original/2020/03/23/mandylikesbeingbroke.jpg"
         }
@@ -69,35 +84,147 @@ export default function SkinCare() {
         hashtag="#DicasSkinCare"
         cards={[
           {
-            image: "https://www.cetaphil.com.br/dw/image/v2/BGGN_PRD/on/demandware.static/-/Sites-Galderma-BR-Library/pt_BR/dw5339aa0f/skincare-tips-pages/como-melhorar-a-pele-do-rosto%20.jpg?sw=500",
+            image:
+              "https://www.cetaphil.com.br/dw/image/v2/BGGN_PRD/on/demandware.static/-/Sites-Galderma-BR-Library/pt_BR/dw5339aa0f/skincare-tips-pages/como-melhorar-a-pele-do-rosto%20.jpg?sw=500",
             alt: "Limpeza",
             text: "Limpeza de pele para remover impurezas.",
             buttonText: "Saiba mais",
-            buttonLink: "https://www.garnier.com.br/dicas/pele/limpeza/limpeza-de-pele-em-casa?gad_source=1&gad_campaignid=10326011003&gbraid=0AAAAACfr97iLDu1JNefive0XcemVvJId4&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6jZ3cW2puOtvz53IZ_kSzD3c2c-qc6TFJ3o94sUY_hdVU1twLJiaV8aAv1JEALw_wcB#:~:text=Use%20%C3%A1gua%20micelar%20para%20acalmar,produtos%20e%20impurezas%20da%20pele."
+            buttonLink:
+              "https://www.garnier.com.br/dicas/pele/limpeza/limpeza-de-pele-em-casa?gad_source=1&gad_campaignid=10326011003&gbraid=0AAAAACfr97iLDu1JNefive0XcemVvJId4&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6jZ3cW2puOtvz53IZ_kSzD3c2c-qc6TFJ3o94sUY_hdVU1twLJiaV8aAv1JEALw_wcB#:~:text=Use%20%C3%A1gua%20micelar%20para%20acalmar,produtos%20e%20impurezas%20da%20pele.",
           },
           {
-            image: "https://media.istockphoto.com/id/1352840704/pt/foto/portrait-of-an-attractive-young-woman-applying-moisturiser-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=U0DfdoinMFL8kKxUQEUDwu-JQh18CCfIlMk00wn_H4E=",
+            image:
+              "https://media.istockphoto.com/id/1352840704/pt/foto/portrait-of-an-attractive-young-woman-applying-moisturiser-against-a-grey-background.jpg?s=612x612&w=0&k=20&c=U0DfdoinMFL8kKxUQEUDwu-JQh18CCfIlMk00wn_H4E=",
             alt: "Hidratação",
             text: "Hidratação para todos os tipos de pele.",
             buttonText: "Saiba mais",
-            buttonLink: "https://www.garnier.com.br/dicas/pele/limpeza/rotina-de-limpeza-hidratacao-e-protecao-para-pele-oleosa?gad_source=1&gad_campaignid=10326011024&gbraid=0AAAAACfr97i0jK7AJASz9kC7bYMBN8U-b&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6iF5pxTzlhGigWRKk9OTkXguASf2VmW9QktCg_M-WlAl1VpOrbZVUsaAlRpEALw_wcB"
+            buttonLink:
+              "https://www.garnier.com.br/dicas/pele/limpeza/rotina-de-limpeza-hidratacao-e-protecao-para-pele-oleosa?gad_source=1&gad_campaignid=10326011024&gbraid=0AAAAACfr97i0jK7AJASz9kC7bYMBN8U-b&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6iF5pxTzlhGigWRKk9OTkXguASf2VmW9QktCg_M-WlAl1VpOrbZVUsaAlRpEALw_wcB",
           },
           {
-            image: "https://thumbs.dreamstime.com/b/m%C3%A1scara-do-ouro-da-mulher-modelo-bonito-com-o-cosm%C3%A9tico-dourado-pele-beleza-skincare-e-tratamento-tiro-sobre-fundo-branco-140288770.jpg",
+            image:
+              "https://thumbs.dreamstime.com/b/m%C3%A1scara-do-ouro-da-mulher-modelo-bonito-com-o-cosm%C3%A9tico-dourado-pele-beleza-skincare-e-tratamento-tiro-sobre-fundo-branco-140288770.jpg",
             alt: "Proteção Solar",
             text: "A importância do protetor solar no seu dia.",
             buttonText: "Saiba mais",
-            buttonLink: "https://quintal-lab.com/blogs/quintal/protetor-solar-entenda-a-importancia-do-cuidado-com-a-pele-em-todas-as-estacoes-do-ano?srsltid=AfmBOoqppDFjdRXIhBl-EY-5nzudSnTtIheWRXSu2sdv9EH6GrNj4_a3"
+            buttonLink:
+              "https://quintal-lab.com/blogs/quintal/protetor-solar-entenda-a-importancia-do-cuidado-com-a-pele-em-todas-as-estacoes-do-ano?srsltid=AfmBOoqppDFjdRXIhBl-EY-5nzudSnTtIheWRXSu2sdv9EH6GrNj4_a3",
           },
           {
-            image: "https://static.vecteezy.com/ti/fotos-gratis/p1/7907200-retrato-de-mulher-europeia-satisfeita-fecha-olhos-fica-semi-nua-com-toalha-enrolada-na-cabeca-tem-pele-suave-saudavel-posa-ombros-nus-fica-em-casa-mulheres-conceito-de-beleza-cuidados-pessoais-gratis-foto.jpg",
+            image:
+              "https://static.vecteezy.com/ti/fotos-gratis/p1/7907200-retrato-de-mulher-europeia-satisfeita-fecha-olhos-fica-semi-nua-com-toalha-enrolada-na-cabeca-tem-pele-suave-saudavel-posa-ombros-nus-fica-em-casa-mulheres-conceito-de-beleza-cuidados-pessoais-gratis-foto.jpg",
             alt: "Esfoliação",
             text: "Esfoliação para renovar a pele.",
             buttonText: "Saiba mais",
-            buttonLink: "https://www.dermotivin.com.br/article/como-esfoliar-a-pele?gad_source=1&gad_campaignid=19313067111&gbraid=0AAAAACe-VYr522cS_xxkhsWt5MQBH9GDV&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6j88lD0oooedCtDeLNhVE67MnhH_aq0uvuxWMxVC72qLbBnHYSi7r0aAhL8EALw_wcB"
+            buttonLink:
+              "https://www.dermotivin.com.br/article/como-esfoliar-a-pele?gad_source=1&gad_campaignid=19313067111&gbraid=0AAAAACe-VYr522cS_xxkhsWt5MQBH9GDV&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6j88lD0oooedCtDeLNhVE67MnhH_aq0uvuxWMxVC72qLbBnHYSi7r0aAhL8EALw_wcB",
           },
         ]}
       />
+      <VideoCarousel
+        carouselTitle="#LuminaVideos"
+        videos={meusVideos}
+        autoplayInterval={5000}
+        prevButtonText="←"
+        nextButtonText="→"
+        captionSuffix="Ver no YouTube"
+        showControls={false}
+        autoplay={false}
+        muted={false}
+        showRelated={true}
+        className="meu-carrossel-personalizado"
+      />
+      <QuizTest
+        quiz={[
+          {
+            question: "Qual o passo mais importante do skin care para você?",
+            options: [
+              { label: "Limpeza", tag: "limpeza" },
+              { label: "Hidratação", tag: "hidratacao" },
+              { label: "Proteção solar", tag: "protecao" },
+              { label: "Esfoliação", tag: "esfoliacao" },
+            ],
+          },
+          {
+            question: "Com que frequência você usa protetor solar?",
+            options: [
+              { label: "Todos os dias", tag: "protecao" },
+              { label: "Só quando está sol", tag: "esporadico" },
+              { label: "Raramente", tag: "raro" },
+              { label: "Nunca", tag: "nunca" },
+            ],
+          },
+          {
+            question: "Qual seu tipo de pele?",
+            options: [
+              { label: "Oleosa", tag: "oleosa" },
+              { label: "Seca", tag: "seca" },
+              { label: "Mista", tag: "mista" },
+              { label: "Normal", tag: "normal" },
+            ],
+          },
+        ]}
+        results={{
+          limpeza: {
+            title: "Você valoriza a limpeza!",
+            description:
+              "Para você, manter a pele limpa é fundamental. Continue investindo em produtos de limpeza adequados ao seu tipo de pele.",
+          },
+          hidratacao: {
+            title: "Hidratação em primeiro lugar!",
+            description:
+              "Você sabe que uma pele hidratada é sinônimo de saúde e beleza. Não esqueça de beber água também!",
+          },
+          protecao: {
+            title: "Protetor solar é seu melhor amigo!",
+            description:
+              "Você está certíssimo! Proteger a pele do sol é essencial para evitar envelhecimento precoce e doenças.",
+          },
+          esfoliacao: {
+            title: "Pele renovada sempre!",
+            description:
+              "Você gosta de manter a pele sempre renovada. Só não exagere na esfoliação para não sensibilizar a pele.",
+          },
+          esporadico: {
+            title: "Use protetor solar com mais frequência!",
+            description:
+              "O protetor solar deve ser usado todos os dias, mesmo em dias nublados.",
+          },
+          raro: {
+            title: "Atenção à proteção solar!",
+            description:
+              "Tente incluir o protetor solar na sua rotina para manter a pele saudável.",
+          },
+          nunca: {
+            title: "Inclua o protetor solar já!",
+            description:
+              "Proteger a pele é fundamental. Comece a usar protetor solar diariamente.",
+          },
+          oleosa: {
+            title: "Pele Oleosa",
+            description:
+              "Prefira produtos oil free e mantenha a limpeza em dia para controlar o brilho.",
+          },
+          seca: {
+            title: "Pele Seca",
+            description:
+              "Invista em hidratantes potentes e evite produtos que ressequem ainda mais sua pele.",
+          },
+          mista: {
+            title: "Pele Mista",
+            description:
+              "Equilibre a hidratação e a limpeza, usando produtos específicos para cada região do rosto.",
+          },
+          normal: {
+            title: "Pele Normal",
+            description:
+              "Continue cuidando bem da sua pele para mantê-la sempre saudável!",
+          },
+        }}
+        buttonText="Avançar"
+        restartText="Tentar novamente"
+      />
+      <FinalPage />
       <Footer />
     </div>
   );

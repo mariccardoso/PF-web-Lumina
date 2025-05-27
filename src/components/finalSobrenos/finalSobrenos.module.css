@@ -1,0 +1,84 @@
+.container {
+  max-width: 100%;
+  margin: 40px auto;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #1c2f4a;
+  user-select: none;
+  padding: 0 8px;
+}
+
+.title {
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: #3574bb;
+  letter-spacing: 0.02em;
+  font-style: italic;
+  margin-bottom: 20px;
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+.list::-webkit-scrollbar {
+  height: 6px;
+}
+.list::-webkit-scrollbar-thumb {
+  background-color: #3574bb;
+  border-radius: 3px;
+}
+.list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.item {
+  white-space: nowrap;
+}
+
+.link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  vertical-align: middle;
+
+  color: #2c3e50;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: color 0.25s ease, text-decoration 0.25s ease;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: #3574bb;
+  text-decoration: underline;
+}
+
+.icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  fill: #444444;
+  transition: fill 0.25s ease;
+  vertical-align: middle;
+  /* Ajuste fino para alinhamento vertical */
+  margin-top: -2px;
+}
+
+.link:hover .icon,
+.link:focus-visible .icon {
+  fill: #3574bb;
+}
