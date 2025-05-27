@@ -1,0 +1,11 @@
+/* Estilos gerais */
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 5rem;
+  font-family: "EB Garamond", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white);
+  min-height: 100vh;
+  color: #333;
+}
+
