@@ -1,4 +1,6 @@
+'use client';
 import { useState } from "react";
+import axios from "axios";
 import styles from "./postForm.module.css";
 
 const API_URL = "http://localhost:5000/post";
@@ -6,40 +8,41 @@ const API_URL = "http://localhost:5000/post";
 export default function PostForm({ onPostCreated }) {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
-  const [image, setImage] = useState(null);
-  const [preview, setPreview] = useState(null);
+  const [imageUrl, setImageUrl] = useState("");
   const [loading, setLoading] = useState(false);
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    setImage(file);
-    setPreview(file ? URL.createObjectURL(file) : null);
-  };
+  const [error, setError] = useState("");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setError("");
+
+    if (!title || !content || !imageUrl) {
+      setError("Todos os campos são obrigatórios.");
+      return;
+    }
+
+    const payload = { title, content, imageUrl };
+
     setLoading(true);
 
-    const formData = new FormData();
-    formData.append("title", title);
-    formData.append("content", content);
-    if (image) formData.append("image", image);
-
     try {
-      const res = await fetch(API_URL, {
-        method: "POST",
-        body: formData,
+      const response = await axios.post(API_URL, payload, {
+        headers: { "Content-Type": "application/json" },
       });
-      const result = await res.json();
+
+      alert("Post publicado com sucesso!");
       setTitle("");
       setContent("");
-      setImage(null);
-      setPreview(null);
+      setImageUrl("");
+      if (onPostCreated) onPostCreated({ success: true, data: response.data });
+
+    } catch (err) {
+      console.error("Erro ao criar post:", err);
+      const message = err.response?.data?.message || "Erro ao publicar.";
+      setError(message);
+      if (onPostCreated) onPostCreated({ success: false, message });
+    } finally {
       setLoading(false);
-      if (onPostCreated) onPostCreated({ success: res.ok, message: result?.message });
-    } catch {
-      setLoading(false);
-      if (onPostCreated) onPostCreated({ success: false, message: "Erro ao criar postagem." });
     }
   };
 
@@ -60,19 +63,15 @@ export default function PostForm({ onPostCreated }) {
         onChange={(e) => setContent(e.target.value)}
         required
       />
-      <label className={styles.imageLabel}>
-        {preview ? (
-          <img src={preview} alt="Prévia" className={styles.imagePreview} />
-        ) : (
-          "Adicionar imagem"
-        )}
-        <input
-          type="file"
-          accept="image/*"
-          style={{ display: "none" }}
-          onChange={handleImageChange}
-        />
-      </label>
+      <input
+        className={styles.input}
+        type="text"
+        placeholder="URL da imagem (ex: https://...)"
+        value={imageUrl}
+        onChange={(e) => setImageUrl(e.target.value)}
+        required
+      />
+      {error && <p className={styles.errorMessage}>{error}</p>}
       <button className={styles.button} type="submit" disabled={loading}>
         {loading ? "Publicando..." : "Publicar"}
       </button>

@@ -1,0 +1,68 @@
+.carouselSection {
+  padding: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.carouselWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.navButton {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0 1rem;
+  color: #444;
+  z-index: 10;
+}
+
+.videoContainer {
+  display: flex;
+  gap: 1rem;
+  overflow: hidden;
+  width: 100%;
+  max-width: 960px;
+  justify-content: center;
+}
+
+.slide {
+  flex: 0 0 30%;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  opacity: 0.4;
+  transform: scale(0.9);
+  pointer-events: none;
+}
+
+.activeSlide {
+  flex: 0 0 40%;
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.sideSlide {
+  flex: 0 0 25%;
+  opacity: 0.5;
+  transform: scale(0.85);
+}
+
+.iframe {
+  width:15rem;
+  height: 23rem;
+  aspect-ratio: 16 / 9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.caption {
+  font-size: 0.9rem;
+  margin-top: 0.5rem;
+}

@@ -1,5 +1,10 @@
+.categories{
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
 .categoriesCard {
-  width: 24.5rem;
+  width: 20rem;
   height: 15rem;
   display: flex;
   flex-direction: row;

@@ -8,6 +8,7 @@ import CategoriesSection from "@/components/categoriesSection";
 import CarouselSection from "@/components/carouselSection";
 import QuickTipsSection from "@/components/dicas";
 import CtaSection from "@/components/ctaSection";
+import VideoCarousel from "@/components/videoCarrosel";
 
 export default function Home() {
   const navItens = [
@@ -45,6 +46,21 @@ export default function Home() {
     },
   ];
 
+  const meusVideos =  [
+  {
+    title: "Dicas de Autocuidado em 60s",
+    embedUrl: "https://www.youtube.com/embed/uY8HW4ggoKU",
+  },
+  {
+    title: "Tutorial de Maquiagem Natural",
+    embedUrl: "https://www.youtube.com/embed/uY8HW4ggoKU",
+  },
+  {
+    title: "Cuidados com a Pele",
+    embedUrl: "https://www.youtube.com/embed/uY8HW4ggoKU",
+  },
+];
+
   return (
     <div className={styles.container}>
       <Header logo="MemeVerse" navItens={navItens} />
@@ -63,8 +79,21 @@ export default function Home() {
           />
           <CategoriesSection categories={categories} categoriesTitle={"Confira o melhor do autocuidado"} />
           <QuickTipsSection />
-          <CarouselSection />
+          <CarouselSection carouselTitle={"Confira nossas principais Postagens"} />
           <TestimonialsSection />
+          <VideoCarousel
+            carouselTitle="Meus vídeos favoritos"
+            videos={meusVideos}
+            autoplayInterval={5000}
+            prevButtonText="←"
+            nextButtonText="→"
+            captionSuffix="Ver no YouTube"
+            showControls={false}
+            autoplay={false}
+            muted={false}
+            showRelated={true}
+            className="meu-carrossel-personalizado"
+          />
           <NewsletterSection />
           <CtaSection />
         </div>
