@@ -1,0 +1,45 @@
+.tipsSection {
+  padding: 40px 0;
+  background: #fff;
+  margin: 40px 0;
+}
+.title {
+  color: var(--darkest-blue);
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  font-weight: 600;
+  text-align: center;
+}
+.tipsGrid {
+  display: flex;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.tipCard {
+  background: var(--light-blue);
+  padding: 24px 18px;
+  max-width: 260px;
+  text-align: center;
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.2s;
+}
+.tipCard:hover {
+  box-shadow: 0 8px 32px rgba(78,93,228,0.13);
+}
+.icon {
+  font-size: 2rem;
+  color: var(--darkest-blue);
+  margin-bottom: 10px;
+  display: block;
+}
+.tipTitle {
+  color: var(--darkest-blue);
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.tipText {
+  color: #444;
+  font-size: 1rem;
+}

@@ -1,9 +1,13 @@
 import Header from "@/components/header";
 import styles from "./page.module.css";
+import TestimonialsSection from "@/components/testimonial";
+import NewsletterSection from "@/components/newsletter";
 import Footer from "@/components/footer";
 import MainCardSection from "@/components/mainCardSection";
 import CategoriesSection from "@/components/categoriesSection";
 import CarouselSection from "@/components/carouselSection";
+import QuickTipsSection from "@/components/dicas";
+import CtaSection from "@/components/ctaSection";
 
 export default function Home() {
   const navItens = [
@@ -38,7 +42,7 @@ export default function Home() {
       image:
         "https://www.tendaatacado.com.br/dicas/wp-content/uploads/2021/04/o-que-e-skincare.jpg",
       link: "/skincare",
-      },
+    },
   ];
 
   return (
@@ -58,7 +62,11 @@ export default function Home() {
             mainCardButton={"learn more"}
           />
           <CategoriesSection categories={categories} categoriesTitle={"Confira o melhor do autocuidado"} />
+          <QuickTipsSection />
           <CarouselSection />
+          <TestimonialsSection />
+          <NewsletterSection />
+          <CtaSection />
         </div>
       </div>
       <Footer />
