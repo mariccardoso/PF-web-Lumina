@@ -82,7 +82,7 @@ export default function Home() {
           <CarouselSection carouselTitle={"Confira nossas principais Postagens"} />
           <TestimonialsSection />
           <VideoCarousel
-            carouselTitle="Meus vídeos favoritos"
+            carouselTitle="#DicasDeBeleza"
             videos={meusVideos}
             autoplayInterval={5000}
             prevButtonText="←"

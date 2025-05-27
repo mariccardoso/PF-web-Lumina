@@ -1,0 +1,74 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  max-width: 280px;
+  margin: 40px auto;
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #1c2f4a;
+  user-select: none;
+  padding: 0 8px;
+}
+
+.prompt {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 14px;
+  color: #3574bb;
+  letter-spacing: 0.02em;
+  font-style: italic;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 16px;
+  border: 2px solid transparent;
+  border-radius: 6px;
+  background: transparent;
+  font-weight: 500;
+  font-size: 0.95rem;
+  color: #3574bb;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  outline-offset: 2px;
+}
+
+.button:hover {
+  background: linear-gradient(135deg, #a7d6ed 0%, #3574bb 100%);
+  color: white;
+  border-color: #3574bb;
+}
+
+.button:focus-visible {
+  border-color: #3574bb;
+  outline: none;
+}
+
+.button span {
+  user-select: none;
+}
+
+.message {
+  font-size: 1.1rem;
+  color: #3574bb;
+  font-weight: 400;
+  font-style: italic;
+  animation: fadeIn 0.4s ease forwards;
+}

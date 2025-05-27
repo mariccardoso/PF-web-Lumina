@@ -6,8 +6,25 @@ import MainCardSection from "@/components/mainCardSection";
 import VideoSection from "@/components/videoSection";
 import VideoSectionRight from "@/components/videoSectionRight";
 import CardHair from "@/components/cardHair";
+import VideoCarousel from "@/components/videoCarrosel";
+import QuizTest from "@/components/quizTest";
+import FinalPage from "@/components/finalPage";
 
 export default function Maquiagem() {
+  const meusVideos = [
+    {
+      title: "Maquiagem para o Dia a Dia",
+      embedUrl: "https://www.youtube.com/embed/wzufDmAPEw8", // Corrigido para embed
+    },
+    {
+      title: "Tutorial de Maquiagem",
+      embedUrl: "https://www.youtube.com/embed/HqudDVhshHY", // Corrigido para embed
+    },
+    {
+      title: "Maquiagem neutra para Iniciantes",
+      embedUrl: "https://www.youtube.com/embed/3jh9pWacbo4", // Corrigido para embed
+    },
+  ];
   const navItens = [
     { label: "Início", href: "/", active: false },
     { label: "Dicas", href: "/feed", active: false },
@@ -94,7 +111,8 @@ export default function Maquiagem() {
             alt: "Base Ideal",
             text: "Descubra como escolher a base certa.",
             buttonText: "Saiba mais",
-            buttonLink: "https://simpleorganic.com.br/blogs/simple-blog/como-encontrar-a-cor-ideal-de-base?utm_source=google&utm_medium=cpc&utm_campaign=20119148876&utm_content=154682190171&utm_term=&gad_source=1&gad_campaignid=20119148876&gbraid=0AAAAACNtaOOmRu0U-HfJErNsbQx75moH4&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6jhwjRiDwA1Pe-hYWNIAmTUylm5cp30K_07c139_sklQdYw_kEdP_QaAsjLEALw_wcB",
+            buttonLink:
+              "https://simpleorganic.com.br/blogs/simple-blog/como-encontrar-a-cor-ideal-de-base?utm_source=google&utm_medium=cpc&utm_campaign=20119148876&utm_content=154682190171&utm_term=&gad_source=1&gad_campaignid=20119148876&gbraid=0AAAAACNtaOOmRu0U-HfJErNsbQx75moH4&gclid=Cj0KCQjwxdXBBhDEARIsAAUkP6jhwjRiDwA1Pe-hYWNIAmTUylm5cp30K_07c139_sklQdYw_kEdP_QaAsjLEALw_wcB",
           },
           {
             image:
@@ -111,10 +129,117 @@ export default function Maquiagem() {
             alt: "Lábios Perfeitos",
             text: "Escolha o batom ideal para cada ocasião.",
             buttonText: "Saiba mais",
-            buttonLink: "https://www.maybelline.com.br/dicas-de-maquiagem/labios/batom/guia-do-batom",
+            buttonLink:
+              "https://www.maybelline.com.br/dicas-de-maquiagem/labios/batom/guia-do-batom",
           },
         ]}
       />
+      <VideoCarousel
+        carouselTitle="#LuminaVideos"
+        videos={meusVideos}
+        autoplayInterval={5000}
+        prevButtonText="←"
+        nextButtonText="→"
+        captionSuffix="Ver no YouTube"
+        showControls={false}
+        autoplay={false}
+        muted={false}
+        showRelated={true}
+        className="meu-carrossel-personalizado"
+      />
+
+      <QuizTest
+        quiz={[
+          {
+            question: "Qual produto você considera indispensável na maquiagem?",
+            options: [
+              { label: "Base", tag: "base" },
+              { label: "Máscara de cílios", tag: "cilios" },
+              { label: "Batom", tag: "batom" },
+              { label: "Blush", tag: "blush" },
+            ],
+          },
+          {
+            question: "Qual estilo de maquiagem você mais gosta?",
+            options: [
+              { label: "Natural", tag: "natural" },
+              { label: "Glamourosa", tag: "glam" },
+              { label: "Colorida", tag: "colorida" },
+              { label: "Clássica", tag: "classica" },
+            ],
+          },
+          {
+            question: "O que você faz primeiro na sua rotina de maquiagem?",
+            options: [
+              { label: "Preparo da pele", tag: "pele" },
+              { label: "Maquiagem dos olhos", tag: "olhos" },
+              { label: "Passa batom", tag: "batom" },
+              { label: "Corrige sobrancelha", tag: "sobrancelha" },
+            ],
+          },
+        ]}
+        results={{
+          base: {
+            title: "Você ama uma pele perfeita!",
+            description:
+              "A base é seu item indispensável. Você gosta de uma pele uniforme e bem preparada, apostando em uma maquiagem impecável.",
+          },
+          cilios: {
+            title: "Olhar marcante!",
+            description:
+              "Você não abre mão de destacar os olhos. Máscara de cílios é seu must-have para um olhar poderoso em qualquer ocasião.",
+          },
+          batom: {
+            title: "Lábios em destaque!",
+            description:
+              "O batom é seu melhor amigo. Você adora dar cor e vida ao sorriso, seja com tons vibrantes ou discretos.",
+          },
+          blush: {
+            title: "Toque de saúde!",
+            description:
+              "Você valoriza um visual saudável e corado. O blush é essencial para dar aquele ar de frescor ao rosto.",
+          },
+          natural: {
+            title: "Estilo Natural",
+            description:
+              "Você prefere uma maquiagem leve, realçando sua beleza de forma sutil e elegante.",
+          },
+          glam: {
+            title: "Estilo Glamouroso",
+            description:
+              "Você adora brilhar! Maquiagem marcante, com muito brilho e destaque, é a sua cara.",
+          },
+          colorida: {
+            title: "Estilo Colorido",
+            description:
+              "Você ama ousar nas cores e criar looks criativos e divertidos.",
+          },
+          classica: {
+            title: "Estilo Clássico",
+            description:
+              "Você prefere makes atemporais, com delineado, batom vermelho e muita elegância.",
+          },
+          pele: {
+            title: "Pele bem preparada!",
+            description:
+              "Você sabe que uma boa maquiagem começa com a preparação da pele. Parabéns pelo cuidado!",
+          },
+          olhos: {
+            title: "Olhos em destaque!",
+            description:
+              "Você gosta de valorizar o olhar e começa sua make pelos olhos.",
+          },
+          sobrancelha: {
+            title: "Detalhes que fazem a diferença!",
+            description:
+              "Você não esquece das sobrancelhas e sabe que elas moldam o rosto.",
+          },
+        }}
+        buttonText="Avançar"
+        restartText="Tentar novamente"
+      />
+
+      <FinalPage />
       <Footer />
     </div>
   );

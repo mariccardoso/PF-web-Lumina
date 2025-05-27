@@ -6,6 +6,7 @@
 .title {
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  color: #3574bb;
 }
 
 .carouselWrapper {
@@ -63,6 +64,25 @@
 }
 
 .caption {
-  font-size: 0.9rem;
+  font-size: 1.05rem;
+  margin-top: 1.2rem;
+  color: #285a8e; 
+  font-weight: bold; 
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+
+.caption a {
+  display: block;
   margin-top: 0.5rem;
+  color: #3574bb; 
+  font-size: 1rem;
+  font-weight: bold; 
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+
+.caption a:hover {
+  color: #285a8e;
+  text-decoration: underline;
 }

@@ -2,6 +2,7 @@ import CardAboutUs from "@/components/cardAboutUs";
 import styles from "./sobrenos.module.css";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import FinalSobreNos from "@/components/finalSobrenos";
 
 export default function Sobrenos () {
   const navItens = [
@@ -34,6 +35,8 @@ export default function Sobrenos () {
 
       <p className={styles.subtitle}>Conheça nossa equipe Lumina</p>
       <CardAboutUs />
+
+      <FinalSobreNos />
       <Footer />
     </div>
   );
