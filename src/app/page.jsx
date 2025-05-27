@@ -42,7 +42,7 @@ export default function Home() {
       name: "Skin Care",
       image:
         "https://www.tendaatacado.com.br/dicas/wp-content/uploads/2021/04/o-que-e-skincare.jpg",
-      link: "/skincare",
+      link: "/skinCare",
     },
   ];
 
