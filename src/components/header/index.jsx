@@ -2,6 +2,7 @@
 import { useState } from "react";
 import styles from "./header.module.css";
 import { Search, Menu, X } from "lucide-react";
+import Link from "next/link";
 
 const Header = ({navItens}) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -9,7 +10,9 @@ const Header = ({navItens}) => {
   return (
     <header className={styles.header}>
       <div className={styles.logo}>
-        <img src="./mainLogo.png" alt="Logo" />
+         <Link href="/">
+          <img src="./mainLogo.png" alt="Logo" style={{ cursor: "pointer" }} />
+        </Link>
       </div>
 
       <button className={styles.menuToggle} onClick={() => setMenuOpen(!menuOpen)}>
