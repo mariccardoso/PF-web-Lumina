@@ -6,7 +6,16 @@ import Footer from "@/components/footer";
 import styles from "./login.module.css";
 
 export default function Login() {
-    const url = "http://localhost:4001/auth/register";
+    const url = "http://localhost:5000/auth/register";
+
+      const navItens = [
+    { label: "Início", href: "/", active: false },
+    // { label: "Dicas", href: "/feed", active: false },
+    { label: "Curiosidades", href: "/curiosidades", active: false },
+    { label: "Contato", href: "/contato", active: false },
+    { label: "Sobre Nós", href: "/sobrenos", active: false },
+    { label: "Login", href: "/login", active: true },
+  ];
 
     const [name, setName] = useState(" ");
     const [email, setEmail] = useState(" ");
@@ -32,7 +41,7 @@ export default function Login() {
     
     return (
         <div className={styles.container}>
-            <Header/>
+            <Header navItens={navItens}/>
             <div className={styles.mainContent}>
                 <h1 className={styles.title}> Faça login</h1>
                 <div className={styles.formContainer}>
