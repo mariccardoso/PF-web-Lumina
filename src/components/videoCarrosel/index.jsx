@@ -54,10 +54,16 @@ const VideoCarousel = ({
   return (
     <section className={`${styles.carouselSection} ${className}`}>
       {carouselTitle && <h2 className={styles.title}>{carouselTitle}</h2>}
-      <div className={styles.carouselWrapper}>
+      <div
+        className={styles.carouselWrapper}
+        onClick={nextSlide} 
+      >
         <button
           className={`${styles.navButton} ${styles.left}`}
-          onClick={prevSlide}
+          onClick={(e) => {
+            e.stopPropagation(); 
+            prevSlide();
+          }}
           dangerouslySetInnerHTML={{ __html: prevButtonText }}
         />
 
@@ -97,7 +103,10 @@ const VideoCarousel = ({
 
         <button
           className={`${styles.navButton} ${styles.right}`}
-          onClick={nextSlide}
+          onClick={(e) => {
+            e.stopPropagation(); 
+            nextSlide();
+          }}
           dangerouslySetInnerHTML={{ __html: nextButtonText }}
         />
       </div>

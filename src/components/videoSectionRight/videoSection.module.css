@@ -8,7 +8,7 @@
 
 .videoAndDescription {
   display: flex;
-  flex-direction: row-reverse; /* conforme seu código */
+  flex-direction: row-reverse;
   align-items: flex-start;
   justify-content: flex-start;
   gap: 2rem;

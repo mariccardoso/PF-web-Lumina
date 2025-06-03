@@ -23,7 +23,7 @@
   font-size: 2rem;
   cursor: pointer;
   padding: 0 1rem;
-  color: #444;
+  color: #3574bb; /* Define a cor das setas */
   z-index: 10;
   position: absolute;
   top: 50%;

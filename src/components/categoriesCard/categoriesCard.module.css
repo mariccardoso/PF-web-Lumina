@@ -25,7 +25,7 @@
     height: 15rem;
   }
   
-  /* Leve degradê translúcido na lateral direita da imagem */
+  
   .categoriesCardImageContainer::after {
     content: "";
     position: absolute;
@@ -49,9 +49,9 @@
   .categoriesCardImageContainer h2{
       position: absolute ; 
       top: 65%;
-      z-index: 1; /* Ensure text appears above the gradient */
+      z-index: 1; 
       margin-left: 1rem;
-      /* style */
+
       font-size: 1.5rem;
       font-weight: 500;
       color: #fff;
