@@ -7,13 +7,13 @@ const CardAboutUs = () => {
       name: "Maria Eduarda",
       position: "Product Owner",
       image:
-        "https://arcosmodels.com/wp-content/uploads/2022/07/JULIA-QUEIROZ-CAPA-SITE-ARCOS-MODELS-2-290x380.jpg",
+        "../assets/duda.jpg",
     },
     {
       name: "Mariana Cardoso",
       position: "Scrum Master",
       image:
-        "https://arcosmodels.com/wp-content/uploads/2022/10/AMORA-CAPA-SITE-ARCOS-MODELS-290x380.jpg",
+        "../assets/mari.jpeg",
     },
     {
       name: "Anna Clara Fiochi",
