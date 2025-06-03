@@ -14,6 +14,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
+  flex-wrap: nowrap;
 }
 
 .navButton {
@@ -24,8 +25,17 @@
   padding: 0 1rem;
   color: #444;
   z-index: 10;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.navButton.left {
+  left: -3rem; 
 }
 
+.navButton.right {
+  right: -3rem; 
+}
 .videoContainer {
   display: flex;
   gap: 1rem;
@@ -35,12 +45,20 @@
   justify-content: center;
 }
 
+.slide,
+.activeSlide,
+.sideSlide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.6s ease, opacity 0.6s ease;
+  pointer-events: none;
+}
+
 .slide {
   flex: 0 0 30%;
-  transition: transform 0.6s ease, opacity 0.6s ease;
   opacity: 0.4;
   transform: scale(0.9);
-  pointer-events: none;
 }
 
 .activeSlide {
@@ -57,27 +75,29 @@
 }
 
 .iframe {
-  width:15rem;
-  height: 23rem;
-  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 9 / 16;
+  border: none;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .caption {
   font-size: 1.05rem;
   margin-top: 1.2rem;
-  color: #285a8e; 
-  font-weight: bold; 
+  color: #285a8e;
+  font-weight: bold;
   letter-spacing: 0.01em;
   line-height: 1.5;
+  text-align: center;
 }
 
 .caption a {
   display: block;
   margin-top: 0.5rem;
-  color: #3574bb; 
+  color: #3574bb;
   font-size: 1rem;
-  font-weight: bold; 
+  font-weight: bold;
   text-decoration: underline;
   transition: color 0.2s;
 }
@@ -85,4 +105,62 @@
 .caption a:hover {
   color: #285a8e;
   text-decoration: underline;
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .slide,
+  .activeSlide,
+  .sideSlide {
+    flex: 0 0 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .carouselWrapper {
+    flex-direction: column;
+  }
+
+  .navButton {
+    font-size: 1.5rem;
+    padding: 0.5rem;
+  }
+
+  .videoContainer {
+    gap: 0.5rem;
+  }
+
+  .slide,
+  .activeSlide,
+  .sideSlide {
+    flex: 0 0 70%;
+  }
+
+  .iframe {
+    max-width: 100%;
+  }
+
+  .caption {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .slide,
+  .activeSlide,
+  .sideSlide {
+    flex: 0 0 90%;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .caption {
+    font-size: 0.9rem;
+  }
+
+  .navButton {
+    font-size: 1.2rem;
+  }
 }

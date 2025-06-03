@@ -50,26 +50,31 @@ const VideoCarousel = ({
 
   const getIndex = (offset) =>
     (currentIndex + offset + videos.length) % videos.length;
+
   return (
     <section className={`${styles.carouselSection} ${className}`}>
       {carouselTitle && <h2 className={styles.title}>{carouselTitle}</h2>}
       <div className={styles.carouselWrapper}>
-        <button className={styles.navButton} onClick={prevSlide} dangerouslySetInnerHTML={{ __html: prevButtonText }} />
+        <button
+          className={`${styles.navButton} ${styles.left}`}
+          onClick={prevSlide}
+          dangerouslySetInnerHTML={{ __html: prevButtonText }}
+        />
 
         <div className={styles.videoContainer}>
           {[getIndex(-1), getIndex(0), getIndex(1)].map((index, i) => (
             <div
               key={index}
               className={`${styles.slide} ${
-                i === 1
-                  ? styles.activeSlide
-                  : styles.sideSlide
+                i === 1 ? styles.activeSlide : styles.sideSlide
               }`}
             >
               <iframe
                 src={`${videos[index].embedUrl}?autoplay=${
                   i === 1 && autoplay ? "1" : "0"
-                }&mute=${muted ? "1" : "0"}&controls=${showControls ? "1" : "0"}&rel=${showRelated ? "1" : "0"}`}
+                }&mute=${muted ? "1" : "0"}&controls=${
+                  showControls ? "1" : "0"
+                }&rel=${showRelated ? "1" : "0"}`}
                 title={videos[index].title}
                 className={styles.iframe}
                 frameBorder="0"
@@ -90,7 +95,11 @@ const VideoCarousel = ({
           ))}
         </div>
 
-        <button className={styles.navButton} onClick={nextSlide} dangerouslySetInnerHTML={{ __html: nextButtonText }} />
+        <button
+          className={`${styles.navButton} ${styles.right}`}
+          onClick={nextSlide}
+          dangerouslySetInnerHTML={{ __html: nextButtonText }}
+        />
       </div>
     </section>
   );
