@@ -1,4 +1,3 @@
-// Arquivo: CarouselSection.jsx
 "use client";
 import { useState, useEffect, useRef } from "react";
 import styles from "./carousel.module.css";
@@ -9,20 +8,39 @@ const CarouselSection = ({ carouselTitle }) => {
   const url = "http://localhost:5000/post";
 
   const [posts, setPosts] = useState([]);
+  const [likedPosts, setLikedPosts] = useState({});
+  const [comments, setComments] = useState({});
+
 
   useEffect(() => {
-    const fecthPosts = async () => {
+    const fetchPosts = async () => {
       try {
-        const response = await axios.get(url); // Faz a requisição para a API
-        setPosts(response.data); // Atualiza o estado conpmm os posts recebidos
-        console.log(posts)
+        const response = await axios.get(url);
+        setPosts(response.data);
       } catch (error) {
-        console.error("Erro ao buscar postagens:");
+        console.error("Erro ao buscar postagens:", error);
       }
     };
 
-    fecthPosts(); // Chama a função para buscar os posts
+    fetchPosts();
   }, []);
+
+  const handleAddComment = (postId, commentText) => {
+    if (!commentText.trim()) return;
+  
+    setComments((prev) => ({
+      ...prev,
+      [postId]: [...(prev[postId] || []), commentText]
+    }));
+  };
+
+  
+  const handleToggleLike = (postId) => {
+    setLikedPosts((prev) => ({
+      ...prev,
+      [postId]: !prev[postId],
+    }));
+  };
 
   const [currentIndex, setCurrentIndex] = useState(1);
   const [touchStartX, setTouchStartX] = useState(0);
@@ -31,7 +49,6 @@ const CarouselSection = ({ carouselTitle }) => {
   const intervalRef = useRef(null);
 
   const goToSlide = (index) => {
-    // Garante que o índice esteja dentro dos limites
     let newIndex = index;
     if (index < 0) {
       newIndex = posts.length - 1;
@@ -49,15 +66,10 @@ const CarouselSection = ({ carouselTitle }) => {
     goToSlide(currentIndex - 1);
   };
 
-  // Handlers para eventos de toque
   const handleTouchStart = (e) => {
     setTouchStartX(e.touches[0].clientX);
     setIsTouching(true);
-
-    // Limpa o intervalo durante o toque
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
+    if (intervalRef.current) clearInterval(intervalRef.current);
   };
 
   const handleTouchMove = (e) => {
@@ -66,53 +78,49 @@ const CarouselSection = ({ carouselTitle }) => {
     const touchEndX = e.touches[0].clientX;
     const diff = touchStartX - touchEndX;
 
-    // Evitar mudanças acidentais - requer movimento mínimo
     if (Math.abs(diff) > 50) {
-      if (diff > 0) {
-        nextSlide();
-      } else {
-        prevSlide();
-      }
+      diff > 0 ? nextSlide() : prevSlide();
       setIsTouching(false);
     }
   };
 
   const handleTouchEnd = () => {
     setIsTouching(false);
-
-    // Reinicia o intervalo após o toque
     startAutoSlide();
   };
 
-  // Iniciar slideshow automático
   const startAutoSlide = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current);
-    }
+    if (intervalRef.current) clearInterval(intervalRef.current);
     intervalRef.current = setInterval(() => {
       nextSlide();
-    }, 3500); // Muda a cada 3.5 segundos
+    }, 3500);
   };
 
   useEffect(() => {
     startAutoSlide();
-
     return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current);
-      }
+      if (intervalRef.current) clearInterval(intervalRef.current);
     };
   }, [currentIndex]);
 
-  // Função para obter o índice modificado que suporta looping
   const getSlideIndex = (baseIndex) => {
     let index = baseIndex;
-    if (index < 0) {
-      index = posts.length - 1;
-    } else if (index >= posts.length) {
-      index = 0;
-    }
+    if (index < 0) index = posts.length - 1;
+    else if (index >= posts.length) index = 0;
     return index;
+  };
+  const renderPostCard = (indexOffset) => {
+    if (posts.length === 0) return null;
+    const post = posts[getSlideIndex(currentIndex + indexOffset)];
+    return (
+      <PostCard
+        post={post}
+        liked={likedPosts[post.id] || false}
+        onLikeToggle={() => handleToggleLike(post.id)}
+        comments={comments[post.id] || []}
+        onAddComment={(text) => handleAddComment(post.id, text)}
+      />
+    );
   };
   return (
     <section className={styles.carouselSection}>
@@ -125,30 +133,17 @@ const CarouselSection = ({ carouselTitle }) => {
         onTouchEnd={handleTouchEnd}
       >
         <div className={styles.carouselTrack}>
-          {/* Card da esquerda */}
-          <div
-            className={`${styles.carouselSlide} ${styles.sideSlide} ${styles.leftSlide}`}
-          >
-            {posts.length > 0 && (
-              <PostCard post={posts[getSlideIndex(currentIndex - 1)]} />
-            )}
-          </div>
+        <div className={`${styles.carouselSlide} ${styles.sideSlide} ${styles.leftSlide}`}>
+  {renderPostCard(-1)}
+</div>
 
-          {/* Card central (ativo) */}
-          <div className={`${styles.carouselSlide} ${styles.activeSlide}`}>
-            {posts.length > 0 && (
-              <PostCard post={posts[getSlideIndex(currentIndex)]} />
-            )}
-          </div>
+<div className={`${styles.carouselSlide} ${styles.activeSlide}`}>
+  {renderPostCard(0)}
+</div>
 
-          {/* Card da direita */}
-          <div
-            className={`${styles.carouselSlide} ${styles.sideSlide} ${styles.rightSlide}`}
-          >
-            {posts.length > 0 && (
-              <PostCard post={posts[getSlideIndex(currentIndex + 1)]} />
-            )}
-          </div>
+<div className={`${styles.carouselSlide} ${styles.sideSlide} ${styles.rightSlide}`}>
+  {renderPostCard(1)}
+</div>
         </div>
 
         {/* Botões de navegação */}

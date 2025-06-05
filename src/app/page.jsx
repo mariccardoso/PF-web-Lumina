@@ -7,8 +7,8 @@ import MainCardSection from "@/components/mainCardSection";
 import CategoriesSection from "@/components/categoriesSection";
 import CarouselSection from "@/components/carouselSection";
 import QuickTipsSection from "@/components/dicas";
-import CtaSection from "@/components/ctaSection";
 import VideoCarousel from "@/components/videoCarrosel";
+import QuizTest from "@/components/quizTest";
 
 export default function Home() {
   const navItens = [
@@ -56,10 +56,100 @@ export default function Home() {
       embedUrl: "https://www.youtube.com/embed/cosjlPfFDS0",
     },
     {
-      title: "Cuidados com a Pele",
-      embedUrl: "https://www.youtube.com/embed/QbjfJwqv2AM",
+      title: "Esfoliação de pele",
+      embedUrl: "https://www.youtube.com/embed/dvDdSDXiJpc",
     },
+    {
+      title: "Um novo jeito de transformar sua franja",
+      embedUrl: "https://www.youtube.com/embed/DKWglMk8Pxc",
+    }
   ];
+
+  const quiz = [
+    {
+      question: "Você dedica quanto tempo para o seu autocuidado diariamente?",
+      options: [
+        { label: "Menos de 30 minutos", tag: "quick" },
+        { label: "30 minutos a 1 hora", tag: "moderate" },
+        { label: "Mais de 1 hora", tag: "extended" },
+      ],
+    },
+    {
+      question: "Qual é o seu maior desafio quando se trata de autocuidado?",
+      options: [
+        { label: "Falta de tempo", tag: "time" },
+        { label: "Dificuldade em encontrar produtos adequados", tag: "products" },
+        { label: "Manter uma rotina consistente", tag: "routine" },
+      ],
+    },
+    {
+      question: "Qual é o seu objetivo principal com o autocuidado?",
+      options: [
+        { label: "Relaxamento e redução do estresse", tag: "relaxation" },
+        { label: "Melhora da aparência", tag: "appearance" },
+        { label: "Saúde mental e emocional", tag: "mentalHealth" },
+      ],
+    },
+    {
+      question: "Você prefere produtos de autocuidado mais naturais ou convencionais?",
+      options: [
+        { label: "Naturais e orgânicos", tag: "natural" },
+        { label: "Convencionais e acessíveis", tag: "conventional" },
+      ],
+    }
+  ]
+
+  const results = {
+    quick: {
+      title: "Você é do tipo prático!",
+      description: "Seu autocuidado é rápido e eficiente, focando no essencial.",
+    },
+    moderate: {
+      title: "Você valoriza o equilíbrio!",
+      description: "Você dedica um tempo razoável para cuidar de si mesmo.",
+    },
+    extended: {
+      title: "Você é um verdadeiro entusiasta do autocuidado!",
+      description: "Você investe tempo e esforço para se sentir bem.",
+    },
+    time: {
+      title: "Falta de tempo não é um obstáculo!",
+      description: "Você busca soluções rápidas e práticas.",
+    },
+    products: {
+      title: "Você adora experimentar novos produtos!",
+      description: "Sua curiosidade te leva a descobrir novas marcas e tendências.",
+    },
+    routine: {
+      title: "Você é disciplinado(a) com sua rotina!",
+      description: "Manter uma rotina consistente é fundamental para você.",
+    },
+    relaxation: {
+      title: "Seu foco é relaxamento e bem-estar!",
+      description: "Você prioriza momentos de tranquilidade e autocuidado.",
+    },
+    appearance: {
+      title: "Aparência é importante para você!",
+      description: "Você investe em produtos que realçam sua beleza.",
+    },
+    mentalHealth: {
+      title: "Saúde mental é prioridade!",
+      description: "Você busca autocuidado para manter o equilíbrio emocional.",
+    },
+    natural: {
+      title: "Você ama o natural!",
+      description:
+        "Produtos naturais são sua escolha preferida, valorizando a pureza.",
+    },
+    conventional: {
+      title:
+        "Você prefere a praticidade dos produtos convencionais!",
+      description:
+        "Acessibilidade e eficácia são suas prioridades na hora de escolher produtos.",
+    },
+  };
+
+
 
   return (
     <div className={styles.container}>
@@ -95,7 +185,7 @@ export default function Home() {
             className="meu-carrossel-personalizado"
           />
           <NewsletterSection />
-          <CtaSection />
+          <QuizTest quiz={quiz} results={results} buttonText="Próxima" restartText="Refazer" />
         </div>
       </div>
       <Footer />
