@@ -1,9 +1,7 @@
 'use client';
 import { useState } from "react";
-import axios from "axios";
+import api from "@/app/services/api";
 import styles from "./postForm.module.css";
-
-const API_URL = "http://localhost:5000/post";
 
 export default function PostForm({ onPostCreated }) {
   const [title, setTitle] = useState("");
@@ -21,26 +19,25 @@ export default function PostForm({ onPostCreated }) {
       return;
     }
 
+    setLoading(true);
     const payload = { title, content, imageUrl };
 
-    setLoading(true);
-
     try {
-      const response = await axios.post(API_URL, payload, {
-        headers: { "Content-Type": "application/json" },
-      });
-
+      // Tenta criar post usando o serviço autenticado
+      const response = await api.post("/post", payload);
       alert("Post publicado com sucesso!");
       setTitle("");
       setContent("");
       setImageUrl("");
       if (onPostCreated) onPostCreated({ success: true, data: response.data });
-
     } catch (err) {
-      console.error("Erro ao criar post:", err);
-      const message = err.response?.data?.message || "Erro ao publicar.";
-      setError(message);
-      if (onPostCreated) onPostCreated({ success: false, message });
+      if (err.response && err.response.status === 401) {
+        setError("Você precisa estar logado para criar um post.");
+      } else {
+        const message = err.response?.data?.message || "Erro ao publicar.";
+        setError(message);
+      }
+      if (onPostCreated) onPostCreated({ success: false, message: err.message });
     } finally {
       setLoading(false);
     }

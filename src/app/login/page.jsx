@@ -4,36 +4,35 @@ import axios from "axios";
 import { useState } from "react";
 import Footer from "@/components/footer";
 import styles from "./login.module.css";
+import Cookies from 'js-cookie';
 
 export default function Login() {
-    const url = "http://localhost:5000/auth/register";
+    const url = "http://localhost:5000/auth/login";
 
-      const navItens = [
-    { label: "Início", href: "/", active: false },
-    // { label: "Dicas", href: "/feed", active: false },
-    { label: "Curiosidades", href: "/curiosidades", active: false },
-    { label: "Contato", href: "/contato", active: false },
-    { label: "Sobre Nós", href: "/sobrenos", active: false },
-    { label: "Login", href: "/login", active: true },
-  ];
+    const navItens = [
+        { label: "Início", href: "/", active: false },
+        // { label: "Dicas", href: "/feed", active: false },
+        { label: "Curiosidades", href: "/curiosidades", active: false },
+        { label: "Contato", href: "/contato", active: false },
+        { label: "Sobre Nós", href: "/sobrenos", active: false },
+        { label: "Login", href: "/login", active: true },
+    ];
 
-    const [name, setName] = useState(" ");
-    const [email, setEmail] = useState(" ");
+    const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
 
-    async function handleLogin() {
+    async function handleLogin(e) {
+        e.preventDefault();
+        setError("");
         try {
-            const response = await axios.post(url, {name, email, password });
-            
-            if (response.data) {
-                // Login foi bem-sucedido
+            const response = await axios.post(url, { email, password });
+            if (response.data && response.data.token) {
+                Cookies.set('token', response.data.token, { expires: 7 });
                 alert("Login realizado com sucesso!");
-                // Aqui você pode redirecionar o usuário para outra página
-                // window.location.href = "/dashboard";
+                window.location.href = "/curiosidades";
             }
         } catch (err) {
-            console.error("Erro no login:", err);
             setError("Falha no login. Verifique suas credenciais.");
             alert("Erro no login: " + (err.response?.data?.message || "Falha na conexão"));
         }
@@ -43,21 +42,15 @@ export default function Login() {
         <div className={styles.container}>
             <Header navItens={navItens}/>
             <div className={styles.mainContent}>
-                <h1 className={styles.title}> Faça login</h1>
-                <div className={styles.formContainer}>
-                    <input
-                        type="text"
-                        placeholder="Nome"
-                        className={styles.input}
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                    />
+                <h1 className={styles.title}>Faça login</h1>
+                <form className={styles.formContainer} onSubmit={handleLogin}>
                     <input
                         type="email"
                         placeholder="Email"
                         className={styles.input}
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        required
                     />
                     <input
                         type="password"
@@ -65,15 +58,14 @@ export default function Login() {
                         className={styles.input}
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
+                        required
                     />
                     {error && <p className={styles.errorMessage}>{error}</p>}
-                    <button className={styles.button} onClick={handleLogin}>Entrar</button>
+                    <button className={styles.button} type="submit">Entrar</button>
                     <p className={styles.registerText}>Não tem uma conta? <a href="/register" className={styles.registerLink}>Cadastre-se</a></p>
-                </div>
+                </form>
             </div>
             <Footer />
         </div>
- )
-
-
+    );
 }

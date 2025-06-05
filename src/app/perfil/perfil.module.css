@@ -1,0 +1,74 @@
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  min-height: 100vh;
+  background: #fafbfc;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mainContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3rem;
+  width: 100%;
+}
+
+.title {
+  font-size: 2rem;
+  color: #222b45;
+  margin-bottom: 2rem;
+  font-family: var(--title-font);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.profileBox {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #e6e9ef;
+  min-width: 260px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.1rem;
+  box-shadow: 0 1px 4px rgba(34,43,69,0.04);
+}
+
+.profileBox p {
+  font-size: 1.08rem;
+  color: #222b45;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.profileBox strong {
+  color: #3574bb;
+  font-weight: 600;
+}
+
+.button {
+  margin-top: 1.2rem;
+  padding: 0.7rem 1.6rem;
+  background: #f5f6fa;
+  color: #3574bb;
+  border: 1px solid #e6e9ef;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-family: var(--title-font);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, border 0.18s;
+}
+
+.button:hover {
+  background: #e6e9ef;
+  color: #1a3a5d;
+  border: 1px solid #3574bb;
+}

@@ -11,6 +11,8 @@
   "dependencies": {
     "axios": "^1.8.4",
     "boxicons": "^2.1.4",
+    "js-cookie": "^3.0.5",
+    "jwt-decode": "^4.0.0",
     "lucide-react": "^0.487.0",
     "lucide-static": "^0.487.0",
     "next": "15.2.4",

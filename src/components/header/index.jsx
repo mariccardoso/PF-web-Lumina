@@ -1,11 +1,35 @@
 'use client';
-import { useState } from "react";
-import styles from "./header.module.css";
+import Cookies from 'js-cookie';
+import { useEffect, useState } from 'react';
 import { Search, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { jwtDecode } from "jwt-decode";
+import styles from "./header.module.css";
 
 const Header = ({navItens}) => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [isLogged, setIsLogged] = useState(false);
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    const token = Cookies.get('token');
+    setIsLogged(!!token);
+    if (token) {
+      try {
+        const decoded = jwtDecode(token);
+        setUser(decoded);
+      } catch {
+        setUser(null);
+      }
+    } else {
+      setUser(null);
+    }
+  }, []);
+
+  const nav = navItens.filter(item => {
+    if (item.label === 'Login' && isLogged) return false;
+    return true;
+  });
 
   return (
     <header className={styles.header}>
@@ -20,7 +44,7 @@ const Header = ({navItens}) => {
       </button>
 
       <nav className={`${styles.nav} ${menuOpen ? styles.showMenu : ""}`}>
-        {navItens.map((item, index) => (
+        {nav.map((item, index) => (
           <a
             key={index}
             href={item.href}
@@ -30,6 +54,11 @@ const Header = ({navItens}) => {
             {item.label}
           </a>
         ))}
+        {isLogged && (
+          <a href="/perfil" className={styles.navItem}>
+            {user && user.name ? user.name : user && user.email ? user.email : "Perfil"}
+          </a>
+        )}
       </nav>
 
       <div className={styles.search}>
