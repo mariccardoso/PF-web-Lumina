@@ -40,6 +40,12 @@ export default function Login() {
     
     return (
         <div className={styles.container}>
+           < img
+      src="./assets/lirio.png" // ou o caminho correto da sua imagem
+      alt="Lírio"
+      className={styles.lirioBg}
+      aria-hidden="true"
+    />
             <Header navItens={navItens}/>
             <div className={styles.mainContent}>
                 <h1 className={styles.title}>Faça login</h1>
