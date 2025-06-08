@@ -13,7 +13,7 @@ const CardAboutUs = () => {
       name: "Mariana Cardoso",
       position: "Scrum Master",
       image:
-        "https://arcosmodels.com/wp-content/uploads/2022/10/AMORA-CAPA-SITE-ARCOS-MODELS-290x380.jpg",
+        "../assets/mariana.jpeg",
     },
     {
       name: "Anna Clara Fiochi",
