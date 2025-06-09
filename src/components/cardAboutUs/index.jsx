@@ -6,8 +6,7 @@ const CardAboutUs = () => {
     {
       name: "Maria Eduarda",
       position: "Product Owner",
-      image:
-        "https://arcosmodels.com/wp-content/uploads/2022/07/JULIA-QUEIROZ-CAPA-SITE-ARCOS-MODELS-2-290x380.jpg",
+    image:"../assets/duda.jpeg",
     },
     {
       name: "Mariana Cardoso",
