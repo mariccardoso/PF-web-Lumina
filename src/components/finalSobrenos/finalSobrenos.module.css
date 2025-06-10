@@ -82,3 +82,31 @@
 .link:focus-visible .icon {
   fill: #3574bb;
 }
+
+@media (max-width: 700px) {
+  .list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+  }
+}
+@media (max-width: 500px) {
+  .container {
+    padding: 0 2px;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .list {
+    flex-direction: column;   
+    gap: 8px;
+    padding-bottom: 4px;
+    align-items: center;    
+  }
+  .link {
+    font-size: 0.85rem;
+  }
+  .icon {
+    width: 14px;
+    height: 14px;
+  }
+}

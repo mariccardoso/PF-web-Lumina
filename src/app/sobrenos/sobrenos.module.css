@@ -1,7 +1,7 @@
 .container {
     max-width: 1400px;
     margin: 0 auto;
-    padding: 2rem 5rem;
+    padding: 2rem;
     font-family: "EB Garamond", Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--white);
     min-height: 100vh;
