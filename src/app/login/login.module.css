@@ -76,7 +76,7 @@
 
   .button {
     padding: 1rem;
-    background-color: var(--second-light-blue);
+    background: var(--second-light-blue);
     color: var(--darkest-blue);
     font-family: (--title-font);
     border: none;

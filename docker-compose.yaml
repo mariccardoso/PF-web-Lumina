@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    # Se você tiver variáveis de ambiente, descomente e configure:
+    # env_file:
+    #   - .env.production

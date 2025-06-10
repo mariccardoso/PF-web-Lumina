@@ -10,13 +10,13 @@ export default function Register() {
     const navItens = [
     { label: "Início", href: "/", active: false },
     { label: "Dicas", href: "/feed", active: false },
-    { label: "Curiosidades", href: "/curiosidades", active: false },
-    { label: "Contato", href: "/curiosidades", active: false },
+    { label: "Feed", href: "/Feed", active: false },
+    { label: "Contato", href: "/Feed", active: false },
     { label: "Sobre Nós", href: "/sobrenos", active: false},
     { label: "Login", href: "/login", active: true },
   ];
 
-    const url = "http://localhost:5000/auth/register";
+    const url = "https://lumina.coolify.fps92.dev/auth/register";
 
     const [name, setName] = useState(" ");
     const [email, setEmail] = useState(" ");
@@ -69,9 +69,36 @@ export default function Register() {
                     />
                     {error && <p className={styles.errorMessage}>{error}</p>}
                     <button className={styles.button} onClick={handleRegister}>Entrar</button>
-                    <p className={styles.registerText}>Não tem uma conta? <a href="/register" className={styles.registerLink}>Cadastre-se</a></p>
+                    <p className={styles.registerText}>Já tem uma conta? <a href="/login" className={styles.registerLink}>Faça Login</a></p>
+                    <p className={styles.registerText}>Ou registre-se com:</p>
+                    <div className={styles.registerButtons}>
+                        <div className={styles.registerButton}>
+                            <a href="https://google.com" target="_blank" rel="noopener noreferrer">
+                                <img src="https://agenciapnz.com/wp-content/uploads/Logo-Google-G.png" alt="Google" className={styles.socialIcon} />
+                                Google
+                            </a>
+                        </div>
+                        <div className={styles.registerButton}>
+                            <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/GitHub_Invertocat_Logo.svg/250px-GitHub_Invertocat_Logo.svg.png" alt="GitHub" className={styles.socialIcon} />
+                                GitHub
+                            </a>
+                        </div>
+                        <div className={styles.registerButton}>
+                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3_zWgHI9wgg-AyGVJW0MYaXwunloH1-twsg&s" alt="Facebook" className={styles.socialIcon} />
+                                Facebook
+                            </a>
+                        </div>
+                    </div>
                 </div>
+                <img
+                    src="/lirio.png"
+                    alt="Flor decorativa"
+                    className={styles.flowerbg}
+                />
             </div>
+            <Footer />
         </div>
     )
 }

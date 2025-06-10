@@ -2,7 +2,7 @@ import axios from 'axios';
 import Cookies from 'js-cookie';
 
 const api = axios.create({
-  baseURL: 'http://localhost:5000',
+  baseURL: 'https://lumina.coolify.fps92.dev',
 });
 
 // Adiciona o token JWT no header Authorization se existir

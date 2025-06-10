@@ -7,12 +7,12 @@ import styles from "./login.module.css";
 import Cookies from 'js-cookie';
 
 export default function Login() {
-    const url = "http://localhost:5000/auth/login";
+    const url = "https://lumina.coolify.fps92.dev/auth/login";
 
     const navItens = [
         { label: "Início", href: "/", active: false },
         // { label: "Dicas", href: "/feed", active: false },
-        { label: "Curiosidades", href: "/curiosidades", active: false },
+        { label: "Feed", href: "/Feed", active: false },
         { label: "Contato", href: "/contato", active: false },
         { label: "Sobre Nós", href: "/sobrenos", active: false },
         { label: "Login", href: "/login", active: true },
@@ -30,7 +30,7 @@ export default function Login() {
             if (response.data && response.data.token) {
                 Cookies.set('token', response.data.token, { expires: 7 });
                 alert("Login realizado com sucesso!");
-                window.location.href = "/curiosidades";
+                window.location.href = "/Feed";
             }
         } catch (err) {
             setError("Falha no login. Verifique suas credenciais.");
@@ -71,6 +71,11 @@ export default function Login() {
                     <p className={styles.registerText}>Não tem uma conta? <a href="/register" className={styles.registerLink}>Cadastre-se</a></p>
                 </form>
             </div>
+            <img
+                src="/lirio.png"
+                alt="Flor decorativa"
+                className={styles.flowerbg}
+            />
             <Footer />
         </div>
     );

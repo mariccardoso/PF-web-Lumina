@@ -7,7 +7,7 @@ import styles from "./curiosidades.module.css";
 import { useState } from "react";
 import { FaPlus, FaSearch } from "react-icons/fa";
 
-export default function Curiosidades() {
+export default function Feed() {
     const [refresh, setRefresh] = useState(false);
     const [showForm, setShowForm] = useState(false);
     const [filter, setFilter] = useState("");
@@ -27,7 +27,7 @@ export default function Curiosidades() {
     const navItens = [
         { label: "Início", href: "/", active: false },
         // { label: "Dicas", href: "/feed", active: false },
-        { label: "Curiosidades", href: "/curiosidades", active: true },
+        { label: "Feed", href: "/Feed", active: true },
         { label: "Contato", href: "/contato", active: false },
         { label: "Sobre Nós", href: "/sobrenos", active: false },
         { label: "Login", href: "/login", active: false },

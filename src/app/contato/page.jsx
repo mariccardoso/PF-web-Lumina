@@ -1,8 +1,18 @@
 "use client";
 import React, { useState } from "react";
 import styles from "./page.module.css";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export default function ContatoPage() {
+    const navItens = [
+        { label: "Início", href: "/", active: false },
+        // { label: "Dicas", href: "/feed", active: false },
+        { label: "Feed", href: "/Feed", active: true },
+        { label: "Contato", href: "/contato", active: false },
+        { label: "Sobre Nós", href: "/sobrenos", active: false },
+        { label: "Login", href: "/login", active: false },
+    ];
     const [form, setForm] = useState({
         nome: "",
         email: "",
@@ -23,6 +33,7 @@ export default function ContatoPage() {
         setForm({ nome: "", email: "", mensagem: "" });
     };    return (
         <div className={styles.container}>
+            <Header navItens={navItens} />
             <div className={styles.mainContent}>
                 <h1 className={styles.title}>Entre em Contato</h1>
                 
@@ -68,6 +79,12 @@ export default function ContatoPage() {
                     {status && <p className={styles.status}>{status}</p>}
                 </form>
             </div>
+            <img
+            src="/lirio.png"
+            alt="Flor decorativa"
+            className={styles.flowerbg}
+        />
+        <Footer />
         </div>
     );
 }
