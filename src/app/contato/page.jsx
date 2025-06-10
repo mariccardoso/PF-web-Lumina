@@ -8,8 +8,8 @@ export default function ContatoPage() {
     const navItens = [
         { label: "Início", href: "/", active: false },
         // { label: "Dicas", href: "/feed", active: false },
-        { label: "Feed", href: "/Feed", active: true },
-        { label: "Contato", href: "/contato", active: false },
+        { label: "Feed", href: "/Feed", active: false },
+        { label: "Contato", href: "/contato", active: true },
         { label: "Sobre Nós", href: "/sobrenos", active: false },
         { label: "Login", href: "/login", active: false },
     ];

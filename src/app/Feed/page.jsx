@@ -38,6 +38,7 @@ export default function Feed() {
             <Header navItens={navItens} />
             <main className={styles.mainContent}>
                 <div className={styles.filterBar}>
+                    <div className={styles.filterTitle}>
                     <FaSearch className={styles.searchIcon} />
                     <input
                         className={styles.filterInput}
@@ -46,6 +47,7 @@ export default function Feed() {
                         value={filter}
                         onChange={(e) => setFilter(e.target.value)}
                     />
+                    </div>
                     <button
                         className={styles.addButton}
                         title="Nova postagem"

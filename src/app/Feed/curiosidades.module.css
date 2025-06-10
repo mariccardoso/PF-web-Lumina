@@ -91,9 +91,40 @@
   max-width: 90vw;
 }
 
+.filterTitle {
+  display: flex;
+  flex-direction: row;
+  gap: 14px
+}
 .overlayBg {
   position: fixed;
   top: 0; left: 0; right: 0; bottom: 0;
   background: rgba(78,93,228,0.13);
   z-index: 1001;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .mainContent {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filterInput {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .addButton {
+    width: 100%;
+    text-align: center;
+  }
 }

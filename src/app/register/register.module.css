@@ -13,12 +13,12 @@
 }
 .flowerbg {
   position: fixed;
-  top: 0.5rem;
+  top: 0.2rem;
   bottom: 0;
   right: 0;
   z-index: 0;
-  width: 500px; 
-  opacity: 0.1; 
+  width: 600px; 
+  opacity: 0.07; 
   pointer-events: none;
   transform: rotate(-20deg);
 
@@ -130,3 +130,24 @@
     background-position: center;
     margin-right: 0.5rem;
   }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+
+    .mainContent {
+      margin-top: 2rem;
+      height: auto;
+    }
+
+    .formContainer {
+      max-width: 100%;
+    }
+
+    .flowerbg {
+      width: 0; 
+    }
+  }
+
+  

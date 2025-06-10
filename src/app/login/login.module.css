@@ -1,31 +1,26 @@
 .container {
-  min-height: 100vh;
-  display: flex;
-  padding: 2rem 10rem;
-  flex-direction: column;
-  background: #f8f8ff;
-  position: relative;
-  overflow: hidden;
-}
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem 5rem;
+    font-family: "EB Garamond", Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--white);
+    color: #333;
+    position: relative;
+    min-height: 80vh;
+    background: #fff;
+    overflow: hidden;
+  }
+  .flowerbg {
+    position: fixed;
+    top: 0.5rem;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    width: 600px; 
+    opacity: 0.07; 
+    pointer-events: none;
+    transform: rotate(-20deg);
 
-.lirioBg {
-  position: fixed;
-  top: 50%;
-  left: 70%;
-  transform: translateY(-50%);
-  width: 45vw;
-  max-width: 650px;
-  min-width: 380px;
-  opacity: 0.10;
-  z-index: 0;
-  pointer-events: none;
-  user-select: none;
-  transform: translateY(-50%) rotate(-30deg);
-}
-
-.mainContent {
-  position: relative;
-  z-index: 1;
 }
 
   .mainContent {
@@ -95,4 +90,23 @@
     color: var(--darkest-blue);
     text-decoration: none;
     font-weight: bold;
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      padding: 1rem;
+    }
+
+    .mainContent {
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .title {
+      font-size: 2rem;
+    }
+
+    .formContainer {
+      max-width: 100%;
+    }
   }
