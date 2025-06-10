@@ -8,7 +8,7 @@ const testimonials = [
   },
   {
     name: "Marcos Silva",
-    text: "Dicas práticas e curiosidades incríveis. Meu cabelo nunca esteve tão saudável!",
+    text: "Dicas práticas e Feed incríveis. Meu cabelo nunca esteve tão saudável!",
     avatar: "https://randomuser.me/api/portraits/men/32.jpg",
   },
   {

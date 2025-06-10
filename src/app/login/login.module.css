@@ -6,7 +6,23 @@
     background-color: var(--white);
     min-height: 100vh;
     color: #333;
+    position: relative;
+    min-height: 100vh;
+    background: #fff;
+    overflow: hidden;
   }
+  .flowerbg {
+    position: fixed;
+    top: 0.5rem;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+    width: 500px; 
+    opacity: 0.1; 
+    pointer-events: none;
+    transform: rotate(-20deg);
+
+}
 
   .mainContent {
     display: flex;
@@ -56,7 +72,7 @@
 
   .button {
     padding: 1rem;
-    background-color: var(--second-light-blue);
+    background: var(--second-light-blue);
     color: var(--darkest-blue);
     font-family: (--title-font);
     border: none;

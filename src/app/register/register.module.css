@@ -1,12 +1,28 @@
 .container {
-    max-width: 1400px;
-    margin: 0 auto;
-    padding: 2rem 5rem;
-    font-family: "EB Garamond", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: var(--white);
-    min-height: 100vh;
-    color: #333;
-  }
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem 5rem;
+  font-family: "EB Garamond", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--white);
+  min-height: 100vh;
+  color: #333;
+  position: relative;
+  min-height: 100vh;
+  background: #fff;
+  overflow: hidden;
+}
+.flowerbg {
+  position: fixed;
+  top: 0.5rem;
+  bottom: 0;
+  right: 0;
+  z-index: 0;
+  width: 500px; 
+  opacity: 0.1; 
+  pointer-events: none;
+  transform: rotate(-20deg);
+
+}
 
   .mainContent {
     display: flex;
@@ -19,12 +35,10 @@
   }
 
   .title {
-    font-size: 2.5rem;
-    text-transform: uppercase;
+    font-size: 2rem;
     font-weight: 500;
     font-family: var(--title-font);
     color: var(--darkest-blue);
-    margin-bottom: 1rem;
   }
 
   .formContainer {
@@ -75,4 +89,44 @@
     color: var(--darkest-blue);
     text-decoration: none;
     font-weight: bold;
+  }
+
+  .registerButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .registerButton {
+    padding: 0.7rem 1.6rem;
+    background: #f5f6fa;
+    color: #3574bb;
+    border: 1px solid #e6e9ef;
+    border-radius: 6px;
+    font-family: var(--text-font);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.18s, color 0.18s, border 0.18s;
+    align-items: center;
+    display: flex;
+  }
+
+  .registerButton:hover {
+    background: #e6e9ef;
+    color: #222b45;
+  }
+
+  .registerButton a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .socialIcon {
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    background-size: cover;
+    background-position: center;
+    margin-right: 0.5rem;
   }

@@ -5,7 +5,7 @@ import PostCard from "../postCard";
 import axios from "axios";
 
 const CarouselSection = ({ carouselTitle }) => {
-  const url = "http://localhost:5000/post";
+  const url = "https://lumina.coolify.fps92.dev/post";
 
   const [posts, setPosts] = useState([]);
   const [likedPosts, setLikedPosts] = useState({});

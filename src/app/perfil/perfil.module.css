@@ -1,74 +1,78 @@
 .container {
-  max-width: 420px;
-  margin: 0 auto;
-  padding: 2.5rem 1.5rem 2rem 1.5rem;
   min-height: 100vh;
-  background: #fafbfc;
+  background: linear-gradient(120deg, #e0e7ff 0%, #f8fafc 100%);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  font-family: "EB Garamond", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .mainContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3rem;
+  justify-content: center;
+  flex: 1;
   width: 100%;
+  margin-top: 3rem;
 }
 
 .title {
-  font-size: 2rem;
-  color: #222b45;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  color: var(--darkest-blue);
   font-family: var(--title-font);
-  font-weight: 600;
-  letter-spacing: 0.5px;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .profileBox {
-  background: #fff;
-  padding: 2rem 1.5rem;
-  border-radius: 12px;
-  border: 1px solid #e6e9ef;
-  min-width: 260px;
-  width: 100%;
-  text-align: left;
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+  border-radius: 1.5rem;
+  padding: 2.5rem 2rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 1.1rem;
-  box-shadow: 0 1px 4px rgba(34,43,69,0.04);
+  align-items: center;
+  gap: 1.2rem;
+  min-width: 320px;
 }
 
-.profileBox p {
-  font-size: 1.08rem;
-  color: #222b45;
-  margin: 0;
-  line-height: 1.6;
+.profileIcon {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #a5b4fc 40%, #818cf8 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 16px 0 rgba(31, 38, 135, 0.10);
 }
 
-.profileBox strong {
-  color: #3574bb;
-  font-weight: 600;
+.profileIcon img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
 }
 
 .button {
-  margin-top: 1.2rem;
-  padding: 0.7rem 1.6rem;
-  background: #f5f6fa;
-  color: #3574bb;
-  border: 1px solid #e6e9ef;
-  border-radius: 6px;
-  font-size: 1rem;
-  font-family: var(--title-font);
-  font-weight: 500;
+  padding: 0.8rem 2rem;
+  background: linear-gradient(90deg, var(--second-light-blue), var(--dark-blue));
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 0.7rem;
   cursor: pointer;
-  transition: background 0.18s, color 0.18s, border 0.18s;
+  font-family: var(--title-font);
+  font-weight: 600;
+  transition: background 0.3s, transform 0.2s;
+  margin-top: 1rem;
 }
 
 .button:hover {
-  background: #e6e9ef;
-  color: #1a3a5d;
-  border: 1px solid #3574bb;
+  background: linear-gradient(90deg, var(--dark-blue), var(--second-light-blue));
+  transform: translateY(-2px) scale(1.03);
 }

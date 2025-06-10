@@ -14,7 +14,7 @@ export default function Home() {
   const navItens = [
     { label: "Início", href: "/", active: true },
     // { label: "Dicas", href: "/feed", active: false },
-    { label: "Curiosidades", href: "/curiosidades", active: false },
+    { label: "Feed", href: "/Feed", active: false },
     { label: "Contato", href: "/contato", active: false },
     { label: "Sobre Nós", href: "/sobrenos", active: false },
     { label: "Login", href: "/login", active: false },

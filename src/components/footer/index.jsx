@@ -5,8 +5,8 @@ import{ Instagram, Linkedin, Github, Facebook } from 'lucide-react'
 const Footer = ( {navItens = [
   { label: "Início", href: "/"},
   { label: "Dicas", href: "/feed" },
-  { label: "Curiosidades", href: "/curiosidades" },
-  { label: "Contato", href: "/curiosidades" },
+  { label: "Feed", href: "/Feed" },
+  { label: "Contato", href: "/Feed" },
   { label: "Login", href: "/login" },
 ]}) => { 
   return (

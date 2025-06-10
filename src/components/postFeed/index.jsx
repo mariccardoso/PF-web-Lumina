@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./postFeed.module.css";
 
-const API_URL = "http://localhost:5000/post";
+const API_URL = "https://lumina.coolify.fps92.dev/post";
 
 export default function PostFeed({ filter = "" }) {
   const [posts, setPosts] = useState([]);
