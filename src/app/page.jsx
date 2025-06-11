@@ -170,9 +170,9 @@ export default function Home() {
       <div className={styles.mainContent}>
         <div className={styles.contentArea}>
           <MainCardSection
-            mainCardTitle={"Seja bem Vindo ao Blog Lumina!"}
+            mainCardTitle={"Seja bem Vinda ao Blog Lumina!"}
             mainCardDescription=
-              {"Explore nossos conteúdos e descubra como cuidar de si mesmo pode ser transformador!"}
+              {"Explore nossos conteúdos e descubra como cuidar de si mesma pode ser transformador!"}
             mainCardImage={
               "https://media-public.canva.com/oiOcw/MAEL-DoiOcw/1/s2.jpg"
             }
