@@ -208,11 +208,10 @@
 
 
 
-/* Responsividade */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .carouselContainer {
     height: auto;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
   }
 
   .carouselTrack {
@@ -224,22 +223,25 @@
 
   .leftSlide,
   .rightSlide {
-    display: none; /* Esconde os cards laterais */
+    display: none !important; /* Esconde os cards laterais */
   }
 
   .carouselSlide {
-    position: relative;
-    transform: scale(1);
-    opacity: 1;
-    width: 100%;
-    max-width: 90vw;
-    margin: 0 auto;
+    position: relative !important;
+    transform: scale(1) !important;
+    opacity: 1 !important;
+    width: 100% !important;
+    max-width: 98vw !important;
+    margin: 0 auto !important;
+    left: 0 !important;
+    right: 0 !important;
   }
 
   .postCard {
-    width: 100%;
-    max-width: 90vw;
-    height: auto;
+    width: 100% !important;
+    max-width: 98vw !important;
+    height: auto !important;
+    min-height: 14rem;
   }
 
   .carouselButton {
@@ -257,7 +259,7 @@
   }
 
   .title {
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     text-align: center;
   }
 }

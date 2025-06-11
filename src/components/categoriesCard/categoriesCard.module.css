@@ -4,8 +4,9 @@
   gap: 3rem;
 }
 .categoriesCard {
+  width: 100%;
   max-width: 24rem;
-  width: 30rem;
+  min-width: 220px;
   height: 15rem;
   display: flex;
   flex-direction: row;
@@ -71,5 +72,8 @@
     .categoriesCardImageContainer {
       height: 8rem;
     }
+      .categoriesContainer {
+    grid-template-columns: 1fr;
+  }
     
   }

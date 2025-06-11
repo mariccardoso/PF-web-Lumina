@@ -4,13 +4,31 @@ import styles from "./carousel.module.css";
 import PostCard from "../postCard";
 import axios from "axios";
 
+function useIsDesktop(breakpoint = 900) {
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsDesktop(window.innerWidth > breakpoint);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, [breakpoint]);
+
+  return isDesktop;
+}
+
 const CarouselSection = ({ carouselTitle }) => {
   const url = "https://lumina.coolify.fps92.dev/post";
-
   const [posts, setPosts] = useState([]);
   const [likedPosts, setLikedPosts] = useState({});
   const [comments, setComments] = useState({});
+  const [currentIndex, setCurrentIndex] = useState(1);
+  const [touchStartX, setTouchStartX] = useState(0);
+  const [isTouching, setIsTouching] = useState(false);
+  const carouselRef = useRef(null);
+  const intervalRef = useRef(null);
 
+  const isDesktop = useIsDesktop();
 
   useEffect(() => {
     const fetchPosts = async () => {
@@ -21,32 +39,23 @@ const CarouselSection = ({ carouselTitle }) => {
         console.error("Erro ao buscar postagens:", error);
       }
     };
-
     fetchPosts();
   }, []);
 
   const handleAddComment = (postId, commentText) => {
     if (!commentText.trim()) return;
-  
     setComments((prev) => ({
       ...prev,
       [postId]: [...(prev[postId] || []), commentText]
     }));
   };
 
-  
   const handleToggleLike = (postId) => {
     setLikedPosts((prev) => ({
       ...prev,
       [postId]: !prev[postId],
     }));
   };
-
-  const [currentIndex, setCurrentIndex] = useState(1);
-  const [touchStartX, setTouchStartX] = useState(0);
-  const [isTouching, setIsTouching] = useState(false);
-  const carouselRef = useRef(null);
-  const intervalRef = useRef(null);
 
   const goToSlide = (index) => {
     let newIndex = index;
@@ -74,10 +83,8 @@ const CarouselSection = ({ carouselTitle }) => {
 
   const handleTouchMove = (e) => {
     if (!isTouching) return;
-
     const touchEndX = e.touches[0].clientX;
     const diff = touchStartX - touchEndX;
-
     if (Math.abs(diff) > 50) {
       diff > 0 ? nextSlide() : prevSlide();
       setIsTouching(false);
@@ -109,6 +116,7 @@ const CarouselSection = ({ carouselTitle }) => {
     else if (index >= posts.length) index = 0;
     return index;
   };
+
   const renderPostCard = (indexOffset) => {
     if (posts.length === 0) return null;
     const post = posts[getSlideIndex(currentIndex + indexOffset)];
@@ -122,6 +130,7 @@ const CarouselSection = ({ carouselTitle }) => {
       />
     );
   };
+
   return (
     <section className={styles.carouselSection}>
       <h2 className={styles.title}>{carouselTitle}</h2>
@@ -133,17 +142,19 @@ const CarouselSection = ({ carouselTitle }) => {
         onTouchEnd={handleTouchEnd}
       >
         <div className={styles.carouselTrack}>
-        <div className={`${styles.carouselSlide} ${styles.sideSlide} ${styles.leftSlide}`}>
-  {renderPostCard(-1)}
-</div>
-
-<div className={`${styles.carouselSlide} ${styles.activeSlide}`}>
-  {renderPostCard(0)}
-</div>
-
-<div className={`${styles.carouselSlide} ${styles.sideSlide} ${styles.rightSlide}`}>
-  {renderPostCard(1)}
-</div>
+          {isDesktop && (
+            <div className={`${styles.carouselSlide} ${styles.sideSlide} ${styles.leftSlide}`}>
+              {renderPostCard(-1)}
+            </div>
+          )}
+          <div className={`${styles.carouselSlide} ${styles.activeSlide}`}>
+            {renderPostCard(0)}
+          </div>
+          {isDesktop && (
+            <div className={`${styles.carouselSlide} ${styles.sideSlide} ${styles.rightSlide}`}>
+              {renderPostCard(1)}
+            </div>
+          )}
         </div>
 
         {/* Botões de navegação */}

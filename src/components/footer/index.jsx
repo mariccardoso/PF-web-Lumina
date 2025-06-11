@@ -4,9 +4,9 @@ import{ Instagram, Linkedin, Github, Facebook } from 'lucide-react'
 
 const Footer = ( {navItens = [
   { label: "Início", href: "/"},
-  { label: "Dicas", href: "/feed" },
+  { label: "Sobre Nós", href: "/sobrenos" },
   { label: "Feed", href: "/Feed" },
-  { label: "Contato", href: "/Feed" },
+  { label: "Contato", href: "/contato" },
   { label: "Login", href: "/login" },
 ]}) => { 
   return (
@@ -47,20 +47,19 @@ const Footer = ( {navItens = [
           <div className={styles.footerNavSection}>
             <h3>Empresa</h3>
             <nav className={styles.footerNav}>
-              <a href="#">Sobre nós</a>
-              <a href="#">Carreiras</a>
-              <a href="#">Blog</a>
-              <a href="#">Contato</a>
+              <a href="/em-desenvolvimento">Carreiras</a>
+              <a href="/">Blog</a>
+              <a href="/em-desenvolvimento">Contato</a>
             </nav>
           </div>
 
           <div className={styles.footerNavSection}>
             <h3>Legal</h3>
             <nav className={styles.footerNav}>
-              <a href="#">Termos de Uso</a>
-              <a href="#">Privacidade</a>
-              <a href="#">Cookies</a>
-              <a href="#">LGPD</a>
+              <a href="/em-desenvolvimento">Termos de Uso</a>
+              <a href="/em-desenvolvimento">Privacidade</a>
+              <a href="/em-desenvolvimento">Cookies</a>
+              <a href="/em-desenvolvimento">LGPD</a>
             </nav>
           </div>
         </div>

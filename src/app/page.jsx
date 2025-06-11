@@ -10,6 +10,19 @@ import QuickTipsSection from "@/components/dicas";
 import VideoCarousel from "@/components/videoCarrosel";
 import QuizTest from "@/components/quizTest";
 
+function useIsMobile(breakpoint = 900) {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const check = () => setIsMobile(window.innerWidth < breakpoint);
+    check();
+    window.addEventListener("resize", check);
+    return () => window.removeEventListener("resize", check);
+  }, [breakpoint]);
+
+  return isMobile;
+}
+
 export default function Home() {
   const navItens = [
     { label: "Início", href: "/", active: true },
