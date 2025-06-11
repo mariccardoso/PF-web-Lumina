@@ -171,9 +171,8 @@ export default function Home() {
         <div className={styles.contentArea}>
           <MainCardSection
             mainCardTitle={"Seja bem Vindo ao Blog Lumina!"}
-            mainCardDescription={
-              "Whether you love modern minimalism, timeless classics, or bold statement pieces."
-            }
+            mainCardDescription=
+              {"Aqui você encontra dicas incríveis de autocuidado, beleza e bem-estar. Explore nossos conteúdos e descubra como cuidar de si mesmo pode ser transformador!"}
             mainCardImage={
               "https://media-public.canva.com/oiOcw/MAEL-DoiOcw/1/s2.jpg"
             }
